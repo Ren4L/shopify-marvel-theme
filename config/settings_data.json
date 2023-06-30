@@ -1,5 +1,6 @@
 {
   "current": {
+    "favicon": "shopify:\/\/shop_images\/logo.svg",
     "logo_width": 90,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -115,7 +116,10 @@
     "cart_type": "notification",
     "show_vendor": false,
     "show_cart_note": false,
-    "cart_drawer_collection": ""
+    "cart_drawer_collection": "",
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {

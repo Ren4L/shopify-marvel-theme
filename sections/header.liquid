@@ -2,7 +2,12 @@
 
 
 <div class="header--container">
-  <img src="{{ 'logo.png' | file_img_url: '2048x2048' }}" alt="logo">
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'logo' %}
+        {{ block.settings.image | image_url: width: 2048 | image_tag }}
+    {% endcase %}
+  {% endfor %}
   <nav>
     {% for block in section.blocks %}
       {% case block.type %}
@@ -19,15 +24,26 @@
   "tag": "header",
   "blocks": [
     {
-      "name": "Navbar element 1",
+      "name": "Navbar element",
       "type": "navbar",
       "limit": 5,
       "settings": [
         {
           "type": "text",
           "id": "navEl",
-          "label": "navEl",
-          "default": "Mission"
+          "label": "Navbar element"
+        }
+      ]
+    },
+    {
+      "name": "Logo image",
+      "type": "logo",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "logo",
+          "label": "Logo"
         }
       ]
     }

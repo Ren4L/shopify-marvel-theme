@@ -2,47 +2,52 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
-    "announcement-bar": {
-      "type": "announcement-bar",
+    "header": {
+      "type": "header",
       "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
+        "a2e37b58-a1b0-4f88-b52c-56fb2b4dbc2a": {
+          "type": "navbar",
           "settings": {
-            "text": "Welcome to our store",
-            "link": ""
+            "navEl": "Mission"
+          }
+        },
+        "8be828c8-4850-4211-9907-92cee3ac5c52": {
+          "type": "navbar",
+          "settings": {
+            "navEl": "Mission"
+          }
+        },
+        "405d2e76-79ab-44d5-8bd8-9205c196943e": {
+          "type": "navbar",
+          "settings": {
+            "navEl": "Mission"
+          }
+        },
+        "10b1d30b-8085-4c1a-afab-b47db02f9856": {
+          "type": "navbar",
+          "settings": {
+            "navEl": "Mission"
+          }
+        },
+        "0475e5cf-3b6e-4f8c-8cd5-4ea9322f6164": {
+          "type": "navbar",
+          "settings": {
+            "navEl": "Mission"
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "a2e37b58-a1b0-4f88-b52c-56fb2b4dbc2a",
+        "8be828c8-4850-4211-9907-92cee3ac5c52",
+        "405d2e76-79ab-44d5-8bd8-9205c196943e",
+        "10b1d30b-8085-4c1a-afab-b47db02f9856",
+        "0475e5cf-3b6e-4f8c-8cd5-4ea9322f6164"
       ],
       "settings": {
-        "color_scheme": "background-1",
-        "show_line_separator": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5
-      }
-    },
-    "header": {
-      "type": "header",
-      "settings": {
-        "logo_position": "middle-left",
-        "menu": "main-menu",
-        "menu_type_desktop": "dropdown",
-        "sticky_header_type": "on-scroll-up",
-        "show_line_separator": true,
-        "color_scheme": "background-1",
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "mobile_logo_position": "center",
-        "margin_bottom": 0,
-        "padding_top": 20,
-        "padding_bottom": 20
       }
     }
   },
   "order": [
-    "announcement-bar",
     "header"
   ]
 }

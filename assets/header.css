@@ -5,6 +5,20 @@ header{
 }
 
 .header--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-    padding: 0 10%;
+    padding: 40px 15%;
+}
+
+nav{
+    display: flex;
+    width: 60%;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav--element{
+
 }

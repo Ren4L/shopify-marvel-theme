@@ -2,15 +2,15 @@
 
 
 <div class="header--container">
-  <h1>{{ section.name }}</h1>
-  <ul>
+  <img src="{{ 'logo.png' | file_img_url: '2048x2048' }}" alt="logo">
+  <nav>
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'navbar' %}
-          <li>{{ block.settings.navEl }}</li>
+          <div class="nav--element">{{ block.settings.navEl }}</div>
       {% endcase %}
     {% endfor %}
-  </ul>
+  </nav>
 </div>
 
 {% schema %}

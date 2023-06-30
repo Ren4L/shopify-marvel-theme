@@ -34,6 +34,12 @@
           "settings": {
             "navEl": "Contact"
           }
+        },
+        "75ac7d05-43d4-49d1-9dda-b1a11d9e4d70": {
+          "type": "logo",
+          "settings": {
+            "logo": "shopify:\/\/shop_images\/logo.png"
+          }
         }
       },
       "block_order": [
@@ -41,7 +47,8 @@
         "8be828c8-4850-4211-9907-92cee3ac5c52",
         "405d2e76-79ab-44d5-8bd8-9205c196943e",
         "10b1d30b-8085-4c1a-afab-b47db02f9856",
-        "0475e5cf-3b6e-4f8c-8cd5-4ea9322f6164"
+        "0475e5cf-3b6e-4f8c-8cd5-4ea9322f6164",
+        "75ac7d05-43d4-49d1-9dda-b1a11d9e4d70"
       ],
       "settings": {
       }

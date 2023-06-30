@@ -1,20 +1,18 @@
 [
   {
-    "name": "theme_info",
-    "theme_name": "Dawn",
-    "theme_version": "10.0.0",
-    "theme_author": "Shopify",
-    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes",
-    "theme_support_url": "https:\/\/support.shopify.com\/"
-  },
-  {
-    "name": "Title and favicon",
+    "name": "Default settings",
     "settings": [
       {
         "type": "text",
         "id": "title",
         "default": "Marvel",
         "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "description",
+        "default": "Description for Marvel",
+        "label": "Description"
       },
       {
         "type": "image_picker",

@@ -1,12 +1,12 @@
 {
   "sections": {
-    "home": {
-      "type": "home",
+    "main": {
+      "type": "main-activate-account",
       "settings": {
       }
     }
   },
   "order": [
-    "home"
+    "main"
   ]
 }

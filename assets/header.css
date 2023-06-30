@@ -2,6 +2,9 @@ header{
     width: 100vw;
     position: absolute;
     top: 0;
+    font-size: 18px;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 400;
 }
 
 .header--container{
@@ -20,5 +23,10 @@ nav{
 }
 
 .nav--element{
+    color: rgba(11, 13, 33, 1);
+    cursor: pointer;
+}
 
+.nav--element:hover{
+    color: rgba(249, 208, 35, 1);
 }

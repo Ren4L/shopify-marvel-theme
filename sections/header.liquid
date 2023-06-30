@@ -5,7 +5,7 @@
   {% for block in section.blocks %}
     {% case block.type %}
       {% when 'logo' %}
-        {{ block.settings.logo | image_url: width: 2048 | image_tag }}
+        {{ block.settings.logo | image_url: width: 145 | image_tag }}
     {% endcase %}
   {% endfor %}
   <nav>

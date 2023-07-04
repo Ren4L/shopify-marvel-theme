@@ -1,6 +1,6 @@
 {{ 'team.css' | asset_url | stylesheet_tag }}
 
-<div class="team--container">
+<div class="team--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
   <div class="cv--container">
     {% for block in section.blocks %}

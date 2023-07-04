@@ -1,6 +1,6 @@
 {{ 'mission.css' | asset_url | stylesheet_tag }}
 
-<div class="mission--container">
+<div class="mission--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
   {% for block in section.blocks %}
     {% case block.type %}

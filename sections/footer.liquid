@@ -1,6 +1,6 @@
 {{ 'footer.css' | asset_url | stylesheet_tag }}
 
-<div class="footer--container">
+<div class="footer--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
   <div class="column">
     {% for block in section.blocks %}

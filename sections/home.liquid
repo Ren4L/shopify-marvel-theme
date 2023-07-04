@@ -3,19 +3,21 @@
 {% for block in section.blocks %}
     {% case block.type %}
         {% when 'image' %}
-            <div class="home--container" style="background: url({{ block.settings.image | image_url: width: 145}}) 50% 50%/cover no-repeat">
-                {% for block in section.blocks %}
+            <div class="home--container" style="background: linear-gradient(to top, black, transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
+                <div class="home--bottom">
+                  {% for block in section.blocks %}
                     {% case block.type %}
-                        {% when 'title' %}
-                            <h1>{{ block.settings.title }}</h1>
+                      {% when 'title' %}
+                        <h1>{{ block.settings.title }}</h1>
                     {% endcase %}
-                {% endfor %}
-                {% for block in section.blocks %}
+                  {% endfor %}
+                  {% for block in section.blocks %}
                     {% case block.type %}
-                        {% when 'support' %}
-                            <h2>{{ block.settings.support }}</h2>
+                      {% when 'support' %}
+                        <h2>{{ block.settings.support }}</h2>
                     {% endcase %}
-                {% endfor %}
+                  {% endfor %}
+                </div>
             </div>
     {% endcase %}
 {% endfor %}

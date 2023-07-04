@@ -4,9 +4,16 @@
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
-    height: 120vh;
+    height: 123vh;
     font-size: 25px;
     color: white;
+}
+
+.section--menu{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: calc(50% - 209/2);
 }
 
 .home--bottom{
@@ -35,10 +42,37 @@ h2{
 }
 
 .home--button{
+    display: flex;
+    align-items: center;
     font-weight: 600;
     font-family: "Sofia Pro", sans-serif;
     text-transform: uppercase;
     background: rgba(249, 208, 35, 1);
     font-size: 0.56em;
     padding: 17px 40px;
+}
+
+.home--button img{
+    margin-left: 5px;
+}
+
+.scroll--line--container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1em;
+    height: 140px;
+}
+
+.scroll--line--container .line{
+    height: 100px;
+    width: 1px;
+    border: 1px solid rgba(249, 208, 35, 1);
+}
+
+.scroll--line--container .text{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 400;
+    font-size: 0.56em;
 }

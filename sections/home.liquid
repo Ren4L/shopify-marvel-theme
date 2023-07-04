@@ -1,13 +1,67 @@
 {{ 'home.css' | asset_url | stylesheet_tag }}
 
+{% for block in section.blocks %}
+    {% case block.type %}
+        {% when 'image' %}
+            <div class="home--container" style="background: url({{ block.settings.image | image_url: width: 145}}) 50% 50%/cover no-repeat">
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'title' %}
+                            <h1>{{ block.settings.title }}</h1>
+                    {% endcase %}
+                {% endfor %}
+                {% for block in section.blocks %}
+                    {% case block.type %}
+                        {% when 'support' %}
+                            <h2>{{ block.settings.support }}</h2>
+                    {% endcase %}
+                {% endfor %}
+            </div>
+    {% endcase %}
+{% endfor %}
 
-<div class="home--container" style="background: url() 50% 50%/cover no-repeat">
-<h1>123123</h1>
-</div>
 
 {% schema %}
 {
   "name": "Home",
-  "tag": "section"
+  "tag": "section",
+  "blocks":[
+    {
+      "name": "Title",
+      "type": "title",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title section"
+        }
+      ]
+    },
+    {
+      "name": "Support text",
+      "type": "support",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "support",
+          "label": "Support text"
+        }
+      ]
+    },
+    {
+      "name": "Background image",
+      "type": "image",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Background image"
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}

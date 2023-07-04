@@ -5,6 +5,7 @@
     "footer": {
       "type": "footer",
       "settings": {
+        "title": "Contact"
       }
     }
   },

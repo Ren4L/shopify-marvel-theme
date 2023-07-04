@@ -41,13 +41,38 @@
 
 .missions--container{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
+    font-size: 1em;
+    margin-top: 96px;
 }
 
 .mission--block{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: flex-start;
+    font-size: 1em;
+}
+
+.mission--block img{
+    margin-bottom: 16px;
+}
+
+.mission--block .title{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    font-size: 0.45em;
+    margin-bottom: 8px;
+}
+
+.mission--block .content{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 300;
+    font-size: 0.14em;
+    color: rgba(11, 13, 33, 1);
+    text-align: center;
+    line-height: 18px;
+    max-width: 200px;
 }

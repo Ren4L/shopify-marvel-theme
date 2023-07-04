@@ -1,8 +1,36 @@
 {{ 'footer.css' | asset_url | stylesheet_tag }}
 
 <div class="footer--container">
-  123
   <h1>{{ section.settings.title }}</h1>
+  <div class="column">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'contact' %}
+          <div class="mail">Email us here: <a href="mailto:{{ block.settings.mail }}">{{ block.settings.mail }}</a></div>
+          <form class="contact--form">
+            <div class="title">Stay in the loop by getting on our mailing list</div>
+            <input type="text" placeholder="NAME*">
+            <input type="email" placeholder="E-MAIL*">
+            <input type="text" placeholder="COMPANY*">
+            <button class="home--button">SEND {{ block.settings.icon | image_url: width: 20 | image_tag }}</button>
+          </form>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <svg class="section--menu" width="117" height="208" viewBox="0 0 117 208" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="77.8672" y="10.9668">01</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 117 8)" fill="white"/>
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="77.8672" y="88.9668">03</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 117 86)" fill="white"/>
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="77.8672" y="127.967">04</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 117 125)" fill="white"/>
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="77.8672" y="166.967">05</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 117 164)" fill="white"/>
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="77.8672" y="49.9668">02</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 117 47)" fill="white"/>
+    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="0.591797" y="205.967">06 {{ section.settings.title }}</tspan></text>
+    <rect width="1" height="60" transform="matrix(0 -1 -1 0 117 202.5)" fill="white"/>
+  </svg>
 </div>
 
 {% schema %}
@@ -18,7 +46,23 @@
     }
   ],
   "blocks": [
-
+    {
+      "type": "contact",
+      "name": "contact",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "mail",
+          "label": "Email"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Icon button"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}

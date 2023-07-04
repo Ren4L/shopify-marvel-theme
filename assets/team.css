@@ -26,6 +26,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    margin-top: 56px;
 }
 
 .cv{
@@ -39,14 +40,110 @@
     border-radius: 0 0 0 64px;
 }
 
+.cv .firstInformation--container img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 200px !important;
+    height: 200px !important;
+    border-radius: 0 0 0 64px;
+}
+
+.cv .name--and--position img{
+    position: relative;
+    top: auto;
+    right: auto;
+    width: auto !important;
+    height: auto !important;
+}
+
 .cv .name--and--position{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
 }
 
+.cv .meet{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    line-height: 18px;
+    font-size: 0.152em;
+    color: rgba(249, 208, 35, 1);
+    margin-bottom: 48px;
+}
+
+.cv .meet img{
+    margin-left: 10px;
+}
+
 .cv .firstInformation--container{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+}
+
+.cv h2{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    line-height: 48px;
+    font-size: 0.445em;
+    margin-bottom: 16px;
+}
+
+.cv h3{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    line-height: 32px;
+    font-size: 0.267em;
+    margin-bottom: 16px;
+}
+
+.cv .position{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 0.152em;
+    margin-bottom: 40px;
+}
+
+.cv .about{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 400;
+    line-height: 26px;
+    font-size: 0.172em;
+    margin-bottom: 66px;
+}
+
+.cv .history{
+    margin-bottom: 56px;
+}
+
+.cv ul{
+    font-size: 1em;
+    list-style-type: none;
+    color: black;
+}
+
+.cv li{
+    font-family: "Sofia Pro", sans-serif;
+    font-size: 0.156em;
+    font-weight: 400;
+    line-height: 18px;
+}
+
+.cv li:before {
+    color: rgba(249, 208, 35, 1);
+    content: "▪";
+    padding-right: 10px;
+}
+
+.cv .social{
+    height: 24px !important;
+}
+
+.cv .social{
+    align-self: flex-end;
 }

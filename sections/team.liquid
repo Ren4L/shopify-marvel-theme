@@ -9,19 +9,23 @@
           <div class="cv">
             <div class="firstInformation--container">
               <div class="name--and--position">
-                <div class="meet"> Meet {{ block.settings.firstName }} {{ 'ArrowYellow.svg' | asset_url }}</div>
+                <div class="meet"> Meet {{ block.settings.firstName }} <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow"></div>
                 <h2>{{ block.settings.firstName }}<br/>{{ block.settings.lastName }}</h2>
                 <div class="position">{{ block.settings.position }}</div>
               </div>
-              {{ block.settings.image | image_url: width: 228 | image_tag }}
+              {{ block.settings.image | image_url: width: 512 | image_tag }}
             </div>
             <div class="about">{{ block.settings.about }}</div>
             <h3>Career History</h3>
-            {{ block.settings.history }}
+            <div class="history">
+              {{ block.settings.history }}
+            </div>
             <h3>Education</h3>
             {{ block.settings.education }}
-            <a href="{{ block.settings.linked }}"><img src="{{ 'linkedin.svg' | asset_url }}" alt="Linked In"></a>
-            <a href="mailto:{{ block.settings.mail }}"><img src="{{ 'mail.svg' | asset_url }}" alt="mail"></a>
+            <div class="social">
+              <a href="{{ block.settings.linked }}"><img src="{{ 'linkedin.svg' | asset_url }}" alt="Linked In"></a>
+              <a href="mailto:{{ block.settings.mail }}"><img src="{{ 'mail.svg' | asset_url }}" alt="mail"></a>
+            </div>
           </div>
       {% endcase %}
     {% endfor %}

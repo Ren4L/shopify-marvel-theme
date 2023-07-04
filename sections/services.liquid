@@ -14,12 +14,7 @@
         {% when 'block' %}
           <div class="service--block">
             <div class="title">{{ block.settings.title }}</div>
-            <ul>
-              <li><span>{{ block.settings.point1 }}</span></li>
-              <li><span>{{ block.settings.point2 }}</span></li>
-              <li><span>{{ block.settings.point3 }}</span></li>
-              <li><span>{{ block.settings.point4 }}</span></li>
-            </ul>
+            <div class="points">{{ block.settings.points }}</div>
             <img src="{{ 'arrow.svg' | asset_url }}" width="50px" alt="Arrow">
           </div>
       {% endcase %}
@@ -83,24 +78,9 @@
           "label": "Title"
         },
         {
-          "type": "text",
-          "id": "point1",
-          "label": "Point 1"
-        },
-        {
-          "type": "text",
-          "id": "point2",
-          "label": "Point 2"
-        },
-        {
-          "type": "text",
-          "id": "point3",
-          "label": "Point 3"
-        },
-        {
-          "type": "text",
-          "id": "point4",
-          "label": "Point 4"
+          "type": "richtext",
+          "id": "points",
+          "label": "Points"
         }
       ]
     },

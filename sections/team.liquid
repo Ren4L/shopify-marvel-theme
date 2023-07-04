@@ -1,0 +1,38 @@
+{{ 'team.css' | asset_url | stylesheet_tag }}
+
+<div class="team--container">
+  <h1>{{ section.settings.title }}</h1>
+
+  <svg class="section--menu" width="108" height="209" viewBox="0 0 108 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="70.6055" y="11.6016">01</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 8)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="68.5938" y="89.6016">03</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 86)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="68.3008" y="166.602">05</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 163)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="68.3887" y="205.602">06</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 202)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="68.6719" y="50.6016">02</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 47)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="0.458984" y="128.102">04 {{ section.settings.title }}</tspan></text>
+    <rect width="1" height="60" transform="matrix(0 -1 -1 0 108 124.5)" fill="#0B0D21"/>
+  </svg>
+</div>
+
+{% schema %}
+{
+  "name": "Team",
+  "tag": "section",
+  "settings":[
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title section",
+      "default": "Team"
+    }
+  ],
+  "blocks":[
+
+  ]
+}
+{% endschema %}

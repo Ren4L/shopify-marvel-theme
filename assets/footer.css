@@ -17,6 +17,7 @@ footer{
     text-align: left;
     font-family: "Alata", sans-serif;
     font-weight: 400;
+    margin-bottom: 56px;
 }
 
 .footer--container h1::after {
@@ -31,4 +32,52 @@ footer{
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
+    font-size: 1em;
+    width: 100%;
+}
+
+.footer--container .mail{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    font-size: 0.445em;
+    line-height: 42px;
+}
+
+.mail a{
+    color: rgba(249, 208, 35, 1);
+    text-decoration: underline;
+}
+
+.footer--container .contact--form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 1em;
+    max-width: 450px;
+}
+
+.contact--form .title{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    font-size: 0.445em;
+    line-height: 48px;
+    width: 75%;
+    margin-bottom: 40px;
+}
+
+.contact--form input{
+    width: 100%;
+    padding: 15px 20px;
+    margin-bottom: 16px;
+    color: black;
+}
+
+.contact--form button{
+    font-family: "Sofia Pro", sans-serif;
+    font-size: 0.156em;
+    font-weight: 600;
+    line-height: 14px;
+    align-self: flex-end;
+    padding-left: 80px;
+    padding-right: 80px;
 }

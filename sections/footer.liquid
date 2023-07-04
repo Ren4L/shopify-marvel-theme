@@ -6,12 +6,12 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'contact' %}
-          <div class="mail">Email us here: <a href="mailto:{{ block.settings.mail }}">{{ block.settings.mail }}</a></div>
+          <div class="mail">Email us here:<br/> <a href="mailto:{{ block.settings.mail }}">{{ block.settings.mail }}</a></div>
           <form class="contact--form">
             <div class="title">Stay in the loop by getting on our mailing list</div>
-            <input type="text" placeholder="NAME*">
-            <input type="email" placeholder="E-MAIL*">
-            <input type="text" placeholder="COMPANY*">
+            <input name="name" type="text" placeholder="NAME*">
+            <input name="email" type="email" placeholder="E-MAIL*">
+            <input name="company" type="text" placeholder="COMPANY*">
             <button class="home--button">SEND {{ block.settings.icon | image_url: width: 20 | image_tag }}</button>
           </form>
       {% endcase %}
@@ -48,7 +48,7 @@
   "blocks": [
     {
       "type": "contact",
-      "name": "contact",
+      "name": "Contact",
       "limit": 1,
       "settings": [
         {

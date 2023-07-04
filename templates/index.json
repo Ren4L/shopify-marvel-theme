@@ -81,6 +81,14 @@
             "title": "$300 M",
             "content": "in capital placed for client ventures"
           }
+        },
+        "38d7ac6a-478a-4719-bf8a-33b06cbbeb8e": {
+          "type": "missions",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/5.svg",
+            "title": "100%",
+            "content": "independent and unbiased advice"
+          }
         }
       },
       "block_order": [
@@ -88,7 +96,8 @@
         "2b49b820-d4f2-443c-bf2f-bcb747a9cf02",
         "826dcd15-6b0d-4d89-ad74-6c56fbe5f263",
         "b983aab9-e945-47ee-9805-04f98538e4c7",
-        "5790023b-182f-4ba1-9eb2-17f272d56f9b"
+        "5790023b-182f-4ba1-9eb2-17f272d56f9b",
+        "38d7ac6a-478a-4719-bf8a-33b06cbbeb8e"
       ],
       "settings": {
         "title": "Mission"

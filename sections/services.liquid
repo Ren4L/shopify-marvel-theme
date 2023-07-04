@@ -15,12 +15,12 @@
           <div class="service--block">
             <div class="title">{{ block.settings.title }}</div>
             <ul>
-              <li>{{ block.settings.point1 }}</li>
-              <li>{{ block.settings.point2 }}</li>
-              <li>{{ block.settings.point3 }}</li>
-              <li>{{ block.settings.point4 }}</li>
+              <li><span>{{ block.settings.point1 }}</span></li>
+              <li><span>{{ block.settings.point2 }}</span></li>
+              <li><span>{{ block.settings.point3 }}</span></li>
+              <li><span>{{ block.settings.point4 }}</span></li>
             </ul>
-            <img src="../assets/arrow.svg" width="50px" alt="Arrow">
+            <img src="{{ 'arrow.svg' | asset_url }}" width="50px" alt="Arrow">
           </div>
       {% endcase %}
     {% endfor %}

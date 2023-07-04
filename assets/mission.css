@@ -1,4 +1,5 @@
 .mission--container{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -27,14 +28,26 @@
     justify-content: space-between;
     width: 100%;
     font-size: 1em;
+    margin-top: 56px;
 }
 
 .mission--image--text--container .text{
     font-size: 0.188em;
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
+    line-height: 26px;
+    margin-left: 55px;
 }
 
-.mission--image--text--container img{
-    height: 100%;
+.missions--container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.mission--block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

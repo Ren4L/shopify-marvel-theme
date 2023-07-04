@@ -13,3 +13,11 @@ a,a:visited{text-decoration: none; color: white}
 a:hover{text-decoration: none;}
 ul li{list-style: none;}
 img{vertical-align: top;}
+
+
+.section--menu{
+    position: absolute;
+    display: flex;
+    right: 0;
+    top: calc(50% - (209px / 2));
+}

@@ -6,16 +6,43 @@
     {% case block.type %}
       {% when 'block' %}
         <div class="mission--image--text--container">
-          {{ block.settings.image | image_url: width: 20 | image_tag }}
+          {{ block.settings.image | image_url: width: 400 | image_tag }}
           <div class="text"><strong>{{ block.settings.bold }}</strong>{{ block.settings.text }}</div>
         </div>
     {% endcase %}
   {% endfor %}
+  <div class="missions--container">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'missions' %}
+          <div class="mission--block">
+            {{ block.settings.image | image_url: width: 72 | image_tag }}
+            <div class="title">{{ block.settings.title }}</div>
+            <div class="content">{{ block.settings.content }}</div>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
+  <svg class="section--menu" width="116" height="209" viewBox="0 0 116 209" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="10.9668">01</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 116 8)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="126.967">04</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 116 124)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="165.967">05</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 116 163)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="204.967">06</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 116 202)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="87.9668">03</tspan></text>
+    <rect width="1" height="20" transform="matrix(0 -1 -1 0 116 85)" fill="#0B0D21"/>
+    <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="0.167969" y="49.9668">02 {{ section.settings.title }}</tspan></text>
+    <rect width="1" height="60" transform="matrix(0 -1 -1 0 116 46.5)" fill="#0B0D21"/>
+  </svg>
+
 </div>
 
 {% schema %}
 {
-  "name": "Home",
+  "name": "Mission",
   "tag": "section",
   "settings":[
     {
@@ -45,6 +72,28 @@
           "type": "text",
           "id": "text",
           "label": "Text"
+        }
+      ]
+    },
+    {
+      "name": "Missions",
+      "type": "missions",
+      "limit": 5,
+      "settings":[
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "content",
+          "label": "content"
         }
       ]
     }

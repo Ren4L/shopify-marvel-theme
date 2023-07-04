@@ -9,13 +9,6 @@
     color: white;
 }
 
-.section--menu{
-    position: absolute;
-    display: flex;
-    right: 0;
-    top: calc(50% - 209/2);
-}
-
 .home--bottom{
     display: flex;
     flex-direction: column;

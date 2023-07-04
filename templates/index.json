@@ -105,6 +105,35 @@
     },
     "services": {
       "type": "services",
+      "blocks": {
+        "5d6539f3-6933-400f-8e9b-0c823be7a6a3": {
+          "type": "paragraph1",
+          "settings": {
+            "paragraph1": "Our clients are at the forefront of energy transition and innovation. Their mandate is complex: balance project needs with customer demands, lofty investment targets and development complexities. Layer on market volatility and regulatory risk and the scope becomes less manageable in-house. This is where Marvel comes in. We understand the task and bring deep expertise to addressing these challenges."
+          }
+        },
+        "a4f7f3c8-e208-428e-b4d5-0775105c449b": {
+          "type": "block",
+          "settings": {
+            "title": "Transaction Support",
+            "point1": "Renewable Natural Gas offtakes",
+            "point2": "RIN, RTC, REC and LCFS brokerage",
+            "point3": "Renewable PPA origination",
+            "point4": "Contract negotiations and structuring"
+          }
+        },
+        "d8fa945f-a768-4f36-94e4-3c78a029dbef": {
+          "type": "paragraph2",
+          "settings": {
+            "paragraph2": "Our clients are time constrained and under-resourced. Agendas shift, budgets move and priorities change. We understand. We are agile, creative and immediately responsive to your various working styles, governance requirements and evolving needs."
+          }
+        }
+      },
+      "block_order": [
+        "5d6539f3-6933-400f-8e9b-0c823be7a6a3",
+        "a4f7f3c8-e208-428e-b4d5-0775105c449b",
+        "d8fa945f-a768-4f36-94e4-3c78a029dbef"
+      ],
       "settings": {
         "title": "Services"
       }

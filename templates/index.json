@@ -115,19 +115,22 @@
         "a4f7f3c8-e208-428e-b4d5-0775105c449b": {
           "type": "block",
           "settings": {
-            "title": "Transaction Support"
+            "title": "Transaction Support",
+            "points": "<ul><li>Renewable Natural Gas offtakes<br\/><\/li><li>RIN, RTC, REC and LCFS brokerage<br\/><\/li><li>Renewable PPA origination<br\/><\/li><li>Contract negotiations and structuring<\/li><\/ul>"
           }
         },
         "acd802ad-6bf0-4988-9a6d-79776935c9b8": {
           "type": "block",
           "settings": {
-            "title": "Enterprise Strategy"
+            "title": "Enterprise Strategy",
+            "points": "<ul><li>Market advisory<br\/><\/li><li>Risk management<br\/><\/li><li>Capital sourcing or deployment<br\/><\/li><li>Resource optimization<\/li><\/ul>"
           }
         },
         "4eca294b-c1b4-4527-bc9b-91d1c4bf5df1": {
           "type": "block",
           "settings": {
-            "title": "Market Development"
+            "title": "Market Development",
+            "points": "<ul><li>New venture strategy<br\/><\/li><li>Go-to-market architecture<br\/><\/li><li>M&A support<br\/><\/li><li>Marketing and partnerships<\/li><\/ul>"
           }
         },
         "d8fa945f-a768-4f36-94e4-3c78a029dbef": {

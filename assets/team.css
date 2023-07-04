@@ -25,7 +25,8 @@
 .cv--container{
     display: flex;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 100%;
     margin-top: 56px;
 }
 
@@ -35,9 +36,10 @@
     align-items: flex-start;
     position: relative;
     padding: 32px 64px;
-    max-width: 540px;
+    max-width: 500px;
     box-shadow: 0 0 40px 0 rgba(0, 13, 129, 0.08);
     border-radius: 0 0 0 64px;
+    min-height: 900px;
 }
 
 .cv .firstInformation--container img{

@@ -1,0 +1,68 @@
+.services--container{
+    position: relative;
+    background: #F9D023;
+    width: 100%;
+    padding: 96px 15%;
+    font-size: 90px;
+}
+
+.services--container h1{
+    font-size: 1em;
+    text-align: left;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+}
+
+.services--container h1::after {
+    content: "";
+    display: block;
+    width: 100px;
+    padding-top: 48px;
+    border-bottom: 6px solid white;
+}
+
+.paragraph1, .paragraph2{
+    font-family: "Sofia Pro", sans-serif;
+    font-size: 0.172em;
+    font-weight: 400;
+    line-height: 26px;
+    margin-top: 56px;
+}
+
+.services--blocks--container{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 1em;
+}
+
+.service--block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1em;
+}
+
+.service--block .title{
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+    font-size: 0.445em;
+}
+
+.service--block ul{
+    font-size: 1em;
+    list-style-type: square;
+    color: white;
+}
+
+.service--block li{
+    font-family: "Sofia Pro", sans-serif;
+    font-size: 0.172em;
+    font-weight: 400;
+    line-height: 26px;
+
+}
+
+.service--block img{
+    cursor: pointer;
+}

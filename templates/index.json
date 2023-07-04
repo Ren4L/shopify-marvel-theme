@@ -102,10 +102,17 @@
       "settings": {
         "title": "Mission"
       }
+    },
+    "services": {
+      "type": "services",
+      "settings": {
+        "title": "Services"
+      }
     }
   },
   "order": [
     "home",
-    "mission"
+    "mission",
+    "services"
   ]
 }

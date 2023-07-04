@@ -2,7 +2,30 @@
 
 <div class="team--container">
   <h1>{{ section.settings.title }}</h1>
-
+  <div class="cv--container">
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'cv' %}
+          <div class="cv">
+            <div class="firstInformation--container">
+              <div class="name--and--position">
+                <div class="meet"> Meet {{ block.settings.firstName }} {{ 'ArrowYellow.svg' | asset_url }}</div>
+                <h2>{{ block.settings.firstName }}<br/>{{ block.settings.lastName }}</h2>
+                <div class="position">{{ block.settings.position }}</div>
+              </div>
+              {{ block.settings.image | image_url: width: 228 | image_tag }}
+            </div>
+            <div class="about">{{ block.settings.about }}</div>
+            <h3>Career History</h3>
+            {{ block.settings.history }}
+            <h3>Education</h3>
+            {{ block.settings.education }}
+            <a href="{{ block.settings.linked }}"><img src="{{ 'linkedin.svg' | asset_url }}" alt="Linked In"></a>
+            <a href="mailto:{{ block.settings.mail }}"><img src="{{ 'mail.svg' | asset_url }}" alt="mail"></a>
+          </div>
+      {% endcase %}
+    {% endfor %}
+  </div>
   <svg class="section--menu" width="108" height="209" viewBox="0 0 108 209" fill="none" xmlns="http://www.w3.org/2000/svg">
     <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="70.6055" y="11.6016">01</tspan></text>
     <rect width="1" height="20" transform="matrix(0 -1 -1 0 108 8)" fill="#0B0D21"/>
@@ -32,7 +55,58 @@
     }
   ],
   "blocks":[
-
+    {
+      "name": "CV",
+      "type": "cv",
+      "limit": 2,
+      "settings":[
+        {
+          "type": "text",
+          "id": "firstName",
+          "label": "First name"
+        },
+        {
+          "type": "text",
+          "id": "lastName",
+          "label": "Last name"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "position",
+          "label": "Position"
+        },
+        {
+          "type": "textarea",
+          "id": "about",
+          "label": "About"
+        },
+        {
+          "type": "richtext",
+          "id": "history",
+          "label": "Career history"
+        },
+        {
+          "type": "richtext",
+          "id": "education",
+          "label": "Education"
+        },
+        {
+          "type": "url",
+          "id": "linked",
+          "label": "Linked in"
+        },
+        {
+          "type": "text",
+          "id": "mail",
+          "label": "Email"
+        }
+      ]
+    }
   ]
 }
 {% endschema %}

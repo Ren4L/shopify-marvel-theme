@@ -21,3 +21,32 @@
     padding-top: 48px;
     border-bottom: 6px solid rgba(249, 208, 35, 1);
 }
+
+.cv--container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.cv{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    padding: 32px 64px;
+    max-width: 540px;
+    box-shadow: 0 0 40px 0 rgba(0, 13, 129, 0.08);
+    border-radius: 0 0 0 64px;
+}
+
+.cv .name--and--position{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.cv .firstInformation--container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}

@@ -53,28 +53,24 @@
     margin-bottom: 24px;
 }
 
-/*.service--block ul{*/
-/*    font-size: 1em;*/
-/*    list-style-type: square;*/
-/*    color: white;*/
-/*}*/
+.service--block ul{
+    font-size: 1em;
+    list-style-type: none;
+    color: black;
+}
 
-/*.service--block li{*/
-/*    font-family: "Sofia Pro", sans-serif;*/
-/*    font-size: 0.172em;*/
-/*    font-weight: 400;*/
-/*    line-height: 26px;*/
-/*    margin-left: 15px;*/
-/*    padding: 8px 0;*/
-/*}*/
-
-.service--block .points{
+.service--block li{
     font-family: "Sofia Pro", sans-serif;
     font-size: 0.172em;
     font-weight: 400;
     line-height: 26px;
-    /*margin-left: 15px;*/
-    /*padding: 8px 0;*/
+    padding: 8px 0;
+}
+
+.service--block li:before {
+    color: white;
+    content: "▪";
+    padding-right: 10px;
 }
 
 

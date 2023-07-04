@@ -14,7 +14,7 @@
         {% when 'block' %}
           <div class="service--block">
             <div class="title">{{ block.settings.title }}</div>
-            <div class="points">{{ block.settings.points }}</div>
+            {{ block.settings.points }}
             <img src="{{ 'arrow.svg' | asset_url }}" width="50px" alt="Arrow">
           </div>
       {% endcase %}

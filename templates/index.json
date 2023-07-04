@@ -164,13 +164,28 @@
             "about": "A serial entrepreneur and industry expert, Katherine has nearly 20 years of experience in running infrastructure businesses and closing complex energy transactions. As the sole founder of Marvel, in 2019, Katherine saw an opportunity to run a business her way — leading with high integrity, unmatched focus on service quality and utmost commitment to driving customers’ yields.",
             "history": "<ul><li>CEO, Renovar, Shell Digital Ventures<\/li><li>CCO, Lightsource bp<\/li><li>Co-Founder and CCO, AMS (acquired by Fluence, NASDAQ: FLNC)<\/li><li>VP and Director, Evolution Markets<\/li><li>Principal, Pacific Gas and Electric Company<\/li><\/ul>",
             "education": "<ul><li>BS, Finance, University of San Francisco<\/li><li>MBA, Finance, Duke University<\/li><\/ul>",
-            "linked": "https:\/\/marveltheme.myshopify.com\/",
-            "mail": "test@gmail.com"
+            "linked": "",
+            "mail": ""
+          }
+        },
+        "0e295e90-2636-4fb1-afdb-8b9ba14c4ef6": {
+          "type": "cv",
+          "settings": {
+            "firstName": "Sam",
+            "lastName": "Peelle",
+            "image": "shopify:\/\/shop_images\/1579049379327_1.jpg",
+            "position": "Senior Director and Partner",
+            "about": "Sam has over 10 years of experience in renewable power and gas markets, with expertise in renewable fuels, demand side management, energy procurement, energy storage and analytics. Throughout his career, Sam has worked on all sides of the transaction, in each case leading with integrity, customer service and a keen focus on delivering results that positively impact the client’s bottom line and environmental impact.",
+            "history": "<ul><li>Director, AMS (acquired by Fluence, NASDAQ: FLNC)<br\/><\/li><li>Manager, EnerNOC (acquired by Enel, BIT: ENEL)<br\/><\/li><li>Regional Manager, United Technologies Corporation<\/li><\/ul>",
+            "education": "<ul><li>BA, Political Science, University of Pennsylvania<\/li><li>MBA, Finance, Babson College<\/li><\/ul>",
+            "linked": "",
+            "mail": ""
           }
         }
       },
       "block_order": [
-        "babf5437-e50e-4bd3-9088-2f0eacc5bcdd"
+        "babf5437-e50e-4bd3-9088-2f0eacc5bcdd",
+        "0e295e90-2636-4fb1-afdb-8b9ba14c4ef6"
       ],
       "settings": {
         "title": "Team"

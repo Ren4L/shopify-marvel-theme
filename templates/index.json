@@ -57,11 +57,20 @@
             "title": "$1B",
             "content": "in closed RNG transactions in 2021 alone"
           }
+        },
+        "826dcd15-6b0d-4d89-ad74-6c56fbe5f263": {
+          "type": "missions",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/2.svg",
+            "title": "$4B",
+            "content": "in cumulative Renewable Energy and RNG closings"
+          }
         }
       },
       "block_order": [
         "9ac36968-8737-4be1-886a-733ca435a1ba",
-        "2b49b820-d4f2-443c-bf2f-bcb747a9cf02"
+        "2b49b820-d4f2-443c-bf2f-bcb747a9cf02",
+        "826dcd15-6b0d-4d89-ad74-6c56fbe5f263"
       ],
       "settings": {
         "title": "Mission"

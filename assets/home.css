@@ -4,8 +4,8 @@
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
-    height: 100vh;
-    font-size: 115px;
+    height: 120vh;
+    font-size: 25px;
     color: white;
 }
 
@@ -16,14 +16,29 @@
     justify-content: space-between;
     font-size: 1em;
     width: 100%;
-    height: 50%;
-    padding: 0 40px;
+    height: 60%;
+    padding: 0 15% 20px;
     text-align: center;
     font-family: "Alata", sans-serif;
+}
+
+h1{
+    font-size: 4em;
+    letter-spacing: 7px;
 }
 
 h2{
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
-    font-size: 25px;
+    font-size: 1em;
+    line-height: 35px;
+}
+
+.home--button{
+    font-weight: 600;
+    font-family: "Sofia Pro", sans-serif;
+    text-transform: uppercase;
+    background: rgba(249, 208, 35, 1);
+    font-size: 0.56em;
+    padding: 17px 40px;
 }

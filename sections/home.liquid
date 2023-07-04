@@ -3,7 +3,7 @@
 {% for block in section.blocks %}
     {% case block.type %}
         {% when 'image' %}
-            <div class="home--container" style="background: linear-gradient(to top, black, transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
+            <div class="home--container" style="background: linear-gradient(to top, rgba(0,0,0, .8), transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
                 <div class="home--bottom">
                   {% for block in section.blocks %}
                     {% case block.type %}
@@ -17,6 +17,15 @@
                         <h2>{{ block.settings.support }}</h2>
                     {% endcase %}
                   {% endfor %}
+                  <button class="home--button">
+                    {% for block in section.blocks %}
+                      {% case block.type %}
+                        {% when 'button' %}
+                          {{ block.settings.text }}
+                          {{ block.settings.icon | image_url: width: 20 | image_tag }}
+                      {% endcase %}
+                    {% endfor %}
+                  </button>
                 </div>
             </div>
     {% endcase %}
@@ -61,6 +70,23 @@
           "type": "image_picker",
           "id": "image",
           "label": "Background image"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Button text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Button icon"
         }
       ]
     }

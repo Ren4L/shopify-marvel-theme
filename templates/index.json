@@ -132,6 +132,16 @@
             "point4": "Resource optimization"
           }
         },
+        "4eca294b-c1b4-4527-bc9b-91d1c4bf5df1": {
+          "type": "block",
+          "settings": {
+            "title": "Market Development",
+            "point1": "New venture strategy",
+            "point2": "Go-to-market architecture",
+            "point3": "M&A support",
+            "point4": "Marketing and partnerships"
+          }
+        },
         "d8fa945f-a768-4f36-94e4-3c78a029dbef": {
           "type": "paragraph2",
           "settings": {
@@ -143,6 +153,7 @@
         "5d6539f3-6933-400f-8e9b-0c823be7a6a3",
         "a4f7f3c8-e208-428e-b4d5-0775105c449b",
         "acd802ad-6bf0-4988-9a6d-79776935c9b8",
+        "4eca294b-c1b4-4527-bc9b-91d1c4bf5df1",
         "d8fa945f-a768-4f36-94e4-3c78a029dbef"
       ],
       "settings": {

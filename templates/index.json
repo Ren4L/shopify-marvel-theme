@@ -122,6 +122,16 @@
             "point4": "Contract negotiations and structuring"
           }
         },
+        "acd802ad-6bf0-4988-9a6d-79776935c9b8": {
+          "type": "block",
+          "settings": {
+            "title": "Enterprise Strategy",
+            "point1": "Market advisory",
+            "point2": "Risk management",
+            "point3": "Capital sourcing or deployment",
+            "point4": "Resource optimization"
+          }
+        },
         "d8fa945f-a768-4f36-94e4-3c78a029dbef": {
           "type": "paragraph2",
           "settings": {
@@ -132,6 +142,7 @@
       "block_order": [
         "5d6539f3-6933-400f-8e9b-0c823be7a6a3",
         "a4f7f3c8-e208-428e-b4d5-0775105c449b",
+        "acd802ad-6bf0-4988-9a6d-79776935c9b8",
         "d8fa945f-a768-4f36-94e4-3c78a029dbef"
       ],
       "settings": {

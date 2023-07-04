@@ -37,9 +37,15 @@
       ],
       "settings": {
       }
+    },
+    "mission": {
+      "type": "mission",
+      "settings": {
+      }
     }
   },
   "order": [
-    "home"
+    "home",
+    "mission"
   ]
 }

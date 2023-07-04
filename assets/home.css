@@ -29,12 +29,12 @@
     font-family: "Alata", sans-serif;
 }
 
-h1{
+.home--container h1{
     font-size: 4em;
     letter-spacing: 7px;
 }
 
-h2{
+.home--container h2{
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
     font-size: 1em;

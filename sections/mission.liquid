@@ -1,0 +1,53 @@
+{{ 'mission.css' | asset_url | stylesheet_tag }}
+
+<div class="mission--container">
+  <h1>{{ section.settings.title }}</h1>
+  {% for block in section.blocks %}
+    {% case block.type %}
+      {% when 'block' %}
+        <div class="mission--image--text--container">
+          {{ block.settings.image | image_url: width: 20 | image_tag }}
+          <div class="text"><strong>{{ block.settings.bold }}</strong>{{ block.settings.text }}</div>
+        </div>
+    {% endcase %}
+  {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Home",
+  "tag": "section",
+  "settings":[
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title section",
+      "default": "Mission"
+    }
+  ],
+  "blocks":[
+    {
+      "type": "block",
+      "name": "Mission content",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "text",
+          "id": "bold",
+          "label": "Bold text"
+        },
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Text"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

@@ -25,11 +25,11 @@
 
 .news--blocks--container{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     font-size: 1em;
-    width: 100%;
-    margin-top: 56px;
+    width: calc(100% + 56px * 2);
+    margin-left: -56px;
+    padding: 56px;
+    overflow: hidden;
 }
 
 .news--element--container{
@@ -42,6 +42,7 @@
     font-size: 1em;
     box-shadow: 0 0 56px 0 rgba(0, 11, 107, 0.16);
     border-radius: 0 0 0 64px;
+    margin-right: 30px;
 }
 
 .news--element--container .news--image{
@@ -49,7 +50,7 @@
     height: 230px;
 }
 
-.news--element--container .news--image:first-child{
+.news--element--container:first-child .news--image{
     border-radius: 0 0 0 64px;
 }
 

@@ -25,7 +25,8 @@
           "type": "button",
           "settings": {
             "text": "contact us",
-            "icon": "shopify:\/\/shop_images\/Group_112.svg"
+            "icon": "shopify:\/\/shop_images\/Group_112.svg",
+            "scroll": "Contact"
           }
         }
       },

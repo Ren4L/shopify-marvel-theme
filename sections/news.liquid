@@ -36,6 +36,23 @@
   </svg>
 </div>
 
+<script>
+  let newsArray = [
+    {% for block in section.blocks %}
+    {% case block.type %}
+    {% when 'news' %}
+    {
+      image: "{{ block.settings.image | image_url: width: 1000}}",
+      icon: "{{ block.settings.icon | image_url: height: 32}}",
+      title: "{{ block.settings.title }}",
+      date: "{{ block.settings.date }}"
+    },
+  {% endcase %}
+  {% endfor %}
+  ];
+  console.log(newsArray);
+</script>
+
 {% schema %}
 {
   "name": "News",

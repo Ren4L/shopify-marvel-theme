@@ -8,11 +8,40 @@
         {{ block.settings.logo | image_url: width: 145 | image_tag }}
     {% endcase %}
   {% endfor %}
-  <nav>
+  <nav class="navbar">
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'navbar' %}
           <div class="nav--element {{ block.settings.navEl }}">{{ block.settings.navEl }}</div>
+      {% endcase %}
+    {% endfor %}
+  </nav>
+  <img src="{{ 'burger.svg' | asset_url }}" alt="Burger" class="burgerIcon">
+  <nav class="navbarAdaptive">
+    <div class="navbarAdaptive--header">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'logo' %}
+            <img src="{{ block.settings.logo | image_url: width: 145 }}" alt="Company" class="logoAdaptive">
+        {% endcase %}
+      {% endfor %}
+      <img src="{{ 'cross.svg' | asset_url }}" alt="Cross" class="crossIcon">
+    </div>
+    <div class="nav--elements--adaptive">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'navbar' %}
+            <div class="nav--element {{ block.settings.navEl }}">{{ block.settings.navEl }}</div>
+        {% endcase %}
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'button' %}
+          <button class="home--button {{ block.settings.scroll }} scroll--btn">
+            {{ block.settings.text }}
+            {{ block.settings.icon | image_url: width: 20 | image_tag }}
+          </button>
       {% endcase %}
     {% endfor %}
   </nav>
@@ -44,6 +73,28 @@
           "type": "image_picker",
           "id": "logo",
           "label": "Logo"
+        }
+      ]
+    },
+    {
+      "name": "Button",
+      "type": "button",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "text",
+          "label": "Button text"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon",
+          "label": "Button icon"
+        },
+        {
+          "type": "text",
+          "id": "scroll",
+          "label": "Scroll to"
         }
       ]
     }

@@ -30,3 +30,48 @@ nav{
 .nav--element:hover{
     color: rgba(249, 208, 35, 1);
 }
+
+.burgerIcon{
+    display: none;
+    cursor: pointer;
+}
+.navbarAdaptive{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: 6;
+    background: white;
+}
+
+.navbarAdaptive--header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 40px 15%;
+    background: black;
+}
+
+.logoAdaptive{
+    filter: invert();
+}
+
+.nav--elements--adaptive{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 50%;
+    font-size: 40px;
+    font-family: "Sofia Pro", sans-serif;
+    font-weight: 700;
+}
+
+@media (max-width: 800px) {
+    .navbar{display: none}
+    .burgerIcon{display: flex}
+}

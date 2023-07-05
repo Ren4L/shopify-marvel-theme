@@ -188,11 +188,27 @@
         "0e295e90-2636-4fb1-afdb-8b9ba14c4ef6"
       ],
       "settings": {
+        "title": "Team"
       }
     },
     "news": {
       "type": "news",
+      "blocks": {
+        "3d7d0cbe-be69-47bb-9876-22e20ea40d7b": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/denys-nevozhai-dHNF-iBfbrA-unsplash.jpg",
+            "icon": "shopify:\/\/shop_images\/1_logo.svg",
+            "title": "Marvel Turns 3, Expands Biomethane Services to Canada and Europe",
+            "date": "July 06, 2022"
+          }
+        }
+      },
+      "block_order": [
+        "3d7d0cbe-be69-47bb-9876-22e20ea40d7b"
+      ],
       "settings": {
+        "title": "News"
       }
     }
   },

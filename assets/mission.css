@@ -31,6 +31,12 @@
     margin-top: 56px;
 }
 
+
+.mission--image--text--container img{
+    display: flex;
+    width: 400px;
+}
+
 .mission--image--text--container .text{
     font-size: 0.188em;
     font-family: "Sofia Pro", sans-serif;
@@ -75,4 +81,71 @@
     text-align: center;
     line-height: 18px;
     max-width: 200px;
+}
+
+
+@media (max-width: 1100px) {
+    .mission--image--text--container{
+        flex-direction: column;
+    }
+    .mission--container .text{
+        margin: 32px 0 0 0 !important;
+    }
+    .missions--container{
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+@media (max-width: 850px) {
+    .mission--container{font-size: 60px}
+
+    .mission--container .text{
+        line-height: 24px;
+        font-size: 0.25em;
+    }
+
+    .mission--block .content{
+        font-size: 0.25em;
+    }
+}
+
+@media (max-width: 650px) {
+    .mission--block{
+        width: 150px;
+    }
+}
+
+@media (max-width: 500px) {
+    .mission--container{
+        font-size: 40px;
+        padding: 56px 15px;
+    }
+    .mission--container h1::after {
+        width: 70px;
+        padding-top: 32px;
+        border-bottom: 4px solid rgba(249, 208, 35, 1);
+    }
+
+    .mission--image--text--container img{
+        width: 100%;
+    }
+
+    .mission--container .text{
+        line-height: 24px;
+        font-size: 0.35em;
+    }
+
+    .mission--block{
+        width: 120px;
+    }
+
+    .mission--block .title{
+        font-size: 0.8em;
+    }
+
+    .mission--block .content{
+        font-size: 0.3em;
+        line-height: 16px;
+    }
 }

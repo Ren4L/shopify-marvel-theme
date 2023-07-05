@@ -42,7 +42,7 @@
     min-height: 900px;
 }
 
-.cv .firstInformation--container img{
+.cv .human{
     position: absolute;
     top: 0;
     right: 0;
@@ -51,13 +51,6 @@
     border-radius: 0 0 0 64px;
 }
 
-.cv .name--and--position img{
-    position: relative;
-    top: auto;
-    right: auto;
-    width: auto !important;
-    height: auto !important;
-}
 
 .cv .name--and--position{
     display: flex;
@@ -77,7 +70,12 @@
     margin-bottom: 48px;
 }
 
-.cv .meet img{
+.cv .arrow{
+    margin-left: 10px;
+}
+
+.cv .arrowAdaptive{
+    display: none;
     margin-left: 10px;
 }
 
@@ -148,4 +146,103 @@
 
 .cv .social{
     align-self: flex-end;
+}
+
+
+@media (max-width: 1300px) {
+    .cv--container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cv{
+        margin-bottom: 32px;
+        min-height: auto;
+    }
+
+    .cv:last-child{
+        margin-bottom: 0;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .cv .meet{
+        margin-bottom: 24px;
+        font-size: 0.225em;
+    }
+
+    .cv .about{
+        font-size: 0.235em;
+    }
+    .cv .position{
+        font-size: 0.2em;
+    }
+    .cv ul{
+        font-size: 1.5em;
+    }
+    .cv h2{
+        line-height: 28px;
+        font-size: 0.37em;
+        margin-bottom: 8px;
+    }
+
+    .team--container{font-size: 60px}
+
+    .cv .human{
+        width: 170px !important;
+        height: 170px !important;
+    }
+
+    .cv .arrow{display: none}
+    .cv .arrowAdaptive{display: flex}
+
+    .cv .social{margin-top: 20px}
+}
+
+@media (max-width: 500px) {
+    .team--container{
+        font-size: 40px;
+        padding: 56px 15px;
+    }
+    .team--container h1::after {
+        width: 70px;
+        padding-top: 32px;
+        border-bottom: 4px solid rgba(249, 208, 35, 1);
+    }
+
+    .cv{
+        padding: 16px 24px;
+    }
+
+    .cv .human{
+        width: 120px !important;
+        height: 120px !important;
+        border-radius: 0 0 0 48px;
+    }
+
+    .cv .meet{
+        margin-bottom: 24px;
+        font-size: 0.3em;
+    }
+
+    .cv .about{
+        font-size: 0.35em;
+    }
+    .cv .position{
+        font-size: 0.3em;
+        margin-bottom: 32px;
+    }
+    .cv ul{
+        font-size: 2.3em;
+        padding: 8px 0;
+    }
+    .cv h2{
+        line-height: 28px;
+        font-size: 0.6em;
+        margin-bottom: 8px;
+    }
+    .cv h3{
+        font-size: 0.4em;
+    }
 }

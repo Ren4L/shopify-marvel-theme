@@ -9,11 +9,11 @@
           <div class="cv">
             <div class="firstInformation--container">
               <div class="name--and--position">
-                <div class="meet"> Meet {{ block.settings.firstName }} <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow"></div>
+                <div class="meet"> Meet {{ block.settings.firstName }} <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow" class="arrow"><img src="{{ 'ArrowYellowCV.svg' | asset_url }}" alt="Arrow" class="arrowAdaptive"></div>
                 <h2>{{ block.settings.firstName }}<br/>{{ block.settings.lastName }}</h2>
                 <div class="position">{{ block.settings.position }}</div>
               </div>
-              {{ block.settings.image | image_url: width: 512 | image_tag }}
+              <img src="{{ block.settings.image | image_url: width: 512 }}" alt="Human" class="human">
             </div>
             <div class="about">{{ block.settings.about }}</div>
             <h3>Career History</h3>

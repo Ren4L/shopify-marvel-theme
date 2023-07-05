@@ -21,6 +21,6 @@ img{vertical-align: top;}
     top: calc(50% - (209px / 2));
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1300px) {
     .section--menu{display: none}
 }

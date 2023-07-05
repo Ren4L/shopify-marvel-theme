@@ -2,24 +2,28 @@
 
 <div class="news--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
+  <img src="{{ 'sliderArrow.svg' | asset_url }}" onclick="slideLeft()" class="arrow arrowLeft" alt="Left Arrow">
   <div class="news--blocks--container">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'news' %}
-          <div class="news--element--container">
-            <div class="news--image" style="background: url({{ block.settings.image | image_url: width: 1000}}) 50% 50%/cover no-repeat"></div>
-            <div class="news--content">
-              <img src="{{ block.settings.icon | image_url: height: 32}}" alt="Icon">
-              <div class="news--title">{{ block.settings.title }}</div>
-              <div class="news--footer">
-                <div class="news--date">{{ block.settings.date }}</div>
-                <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow">
+    <div class="news--slider--container">
+      {% for block in section.blocks %}
+        {% case block.type %}
+          {% when 'news' %}
+            <div class="news--element--container">
+              <div class="news--image" style="background: url({{ block.settings.image | image_url: width: 1000}}) 50% 50%/cover no-repeat"></div>
+              <div class="news--content">
+                <img src="{{ block.settings.icon | image_url: height: 32}}" alt="Icon">
+                <div class="news--title">{{ block.settings.title }}</div>
+                <div class="news--footer">
+                  <div class="news--date">{{ block.settings.date }}</div>
+                  <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow">
+                </div>
               </div>
             </div>
-          </div>
-      {% endcase %}
-    {% endfor %}
+        {% endcase %}
+      {% endfor %}
+    </div>
   </div>
+  <img src="{{ 'sliderArrow.svg' | asset_url }}" onclick="slideRight()" class="arrow arrowRight" alt="Left Arrow">
   <svg class="section--menu" width="107" height="209" viewBox="0 0 107 209" fill="none" xmlns="http://www.w3.org/2000/svg">
     <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="67.8672" y="10.9668">01</tspan></text>
     <rect width="1" height="20" transform="matrix(0 -1 -1 0 107 8)" fill="#0B0D21"/>
@@ -37,20 +41,35 @@
 </div>
 
 <script>
-  let newsArray = [
-    {% for block in section.blocks %}
-    {% case block.type %}
-    {% when 'news' %}
-    {
-      image: "{{ block.settings.image | image_url: width: 1000}}",
-      icon: "{{ block.settings.icon | image_url: height: 32}}",
-      title: "{{ block.settings.title }}",
-      date: "{{ block.settings.date }}"
-    },
-  {% endcase %}
-  {% endfor %}
-  ];
-  console.log(newsArray);
+  let pos = 1;
+  let flag = true;
+  let sliderContainer = document.querySelector('.news--slider--container');
+
+  initial();
+
+  function initial(){
+    let news = document.querySelector('.news--slider--container').children.length;
+    if (news < 4)
+      document.querySelectorAll('.arrow').forEach((el) => el.style.display = 'none');
+  }
+
+  function slideRight(e){
+    if (flag && pos < 4) {
+      flag = false;
+      sliderContainer.style.marginLeft =  parseInt(window.getComputedStyle(sliderContainer).marginLeft) - 380 + 'px';
+      pos++;
+      setTimeout(() => flag = true, 1000);
+    }
+  }
+
+  function slideLeft(e){
+    if (flag && pos !== 1) {
+      flag = false;
+      sliderContainer.style.marginLeft =  parseInt(window.getComputedStyle(sliderContainer).marginLeft) + 380 + 'px';
+      pos--;
+      setTimeout(() => flag = true, 1000);
+    }
+  }
 </script>
 
 {% schema %}

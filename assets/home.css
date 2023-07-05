@@ -90,9 +90,10 @@
 
 @media (max-width: 500px) {
     .home--container{font-size: 14px}
-    .home--container h1{font-size: 2.5em;}
+    .home--container h1{font-size: 2.3em;}
     .home--bottom{
-        padding: 15px 15px 60px;
+        height: 70% !important;
+        padding: 15px 15px 56px !important;
     }
     .home--button{font-size: 1em}
 }

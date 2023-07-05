@@ -81,3 +81,50 @@ footer{
     padding-left: 80px;
     padding-right: 80px;
 }
+
+
+@media (max-width: 1300px) {
+    .footer--container .column{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer--container .mail{
+        margin-bottom: 56px;
+        word-break: break-word;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .footer--container .mail, .footer--container .title{
+        line-height: 28px;
+        font-size: 0.37em;
+    }
+
+    .footer--container .footer--button{
+        font-size: 0.235em ;
+    }
+
+    .footer--container{font-size: 60px}
+
+}
+
+@media (max-width: 500px) {
+    .footer--container{
+        font-size: 40px;
+        padding: 56px 15px;
+    }
+    .footer--container h1::after {
+        width: 70px;
+        padding-top: 32px;
+        border-bottom: 4px solid rgba(249, 208, 35, 1);
+    }
+
+    .footer--container .footer--button{
+        font-size: 0.35em;
+    }
+    .footer--container .mail, .footer--container .title{
+        font-size: 0.6em;
+    }
+}

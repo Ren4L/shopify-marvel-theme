@@ -6,7 +6,7 @@
     {% case block.type %}
       {% when 'block' %}
         <div class="mission--image--text--container">
-          {{ block.settings.image | image_url: width: 400 | image_tag }}
+          <img src="{{ block.settings.image | image_url: width: 400}}" alt="Mission">
           <div class="text"><strong>{{ block.settings.bold }}</strong>{{ block.settings.text }}</div>
         </div>
     {% endcase %}

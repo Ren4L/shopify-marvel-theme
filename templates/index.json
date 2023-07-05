@@ -189,12 +189,18 @@
       ],
       "settings": {
       }
+    },
+    "news": {
+      "type": "news",
+      "settings": {
+      }
     }
   },
   "order": [
     "home",
     "mission",
     "services",
-    "team"
+    "team",
+    "news"
   ]
 }

@@ -38,7 +38,7 @@
     {% for block in section.blocks %}
       {% case block.type %}
         {% when 'button' %}
-          <button class="home--button {{ block.settings.scroll }} scroll--btn">
+          <button class="home--button {{ block.settings.scroll }} scroll--btn header--button">
             {{ block.settings.text }}
             {{ block.settings.icon | image_url: width: 20 | image_tag }}
           </button>

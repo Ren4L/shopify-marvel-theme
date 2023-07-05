@@ -23,6 +23,8 @@
       {% endfor %}
     </div>
   </div>
+  <div class="pagination--container">
+  </div>
   <img src="{{ 'sliderArrow.svg' | asset_url }}" onclick="slideRight()" class="arrow arrowRight" alt="Left Arrow">
   <svg class="section--menu" width="107" height="209" viewBox="0 0 107 209" fill="none" xmlns="http://www.w3.org/2000/svg">
     <text fill="#0B0D21" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan x="67.8672" y="10.9668">01</tspan></text>
@@ -44,13 +46,48 @@
   let pos = 1;
   let flag = true;
   let sliderContainer = document.querySelector('.news--slider--container');
-
   initial();
 
+  function Resize(e){
+    sliderContainer.style.marginLeft = '0px';
+    pos = 1;
+    flag = true;
+    if (window.innerWidth < 500)
+      RenderPagination();
+  }
+
+  function RenderPagination(){
+    document.querySelector('.pagination--container').innerHTML = '';
+    for (let i = 0; i < document.querySelector('.news--slider--container').children.length; i++) {
+      let img = document.createElement('img');
+      img.src = "{{ 'rectangleYellow.svg' | asset_url }}";
+      if (i == 0)
+        img.className = 'pagination--el activePag';
+      else
+        img.className = 'pagination--el';
+      img.setAttribute('data-id', i);
+      img.addEventListener('click', ClickPagination);
+      document.querySelector('.pagination--container').append(img);
+    }
+  }
+
+  function ClickPagination(e){
+    if (flag) {
+      flag = false;
+      sliderContainer.style.marginLeft =  -280 * +e.target.dataset.id + 'px';
+      document.querySelector('.activePag').classList.toggle('activePag');
+      e.target.classList.toggle('activePag');
+      setTimeout(() => flag = true, 1000);
+    }
+  }
+
   function initial(){
+    window.addEventListener('resize', Resize);
     let news = document.querySelector('.news--slider--container').children.length;
     if (news < 4)
       document.querySelectorAll('.arrow').forEach((el) => el.style.display = 'none');
+    if (window.innerWidth < 500)
+      RenderPagination();
   }
 
   function slideRight(e){

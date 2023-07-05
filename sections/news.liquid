@@ -8,11 +8,13 @@
         {% when 'news' %}
           <div class="news--element--container">
             <div class="news--image" style="background: url({{ block.settings.image | image_url: width: 1000}}) 50% 50%/cover no-repeat"></div>
-            <img src="{{ block.settings.image | image_url: height: 32}}" alt="Icon">
-            <div class="news--title">{{ block.settings.title }}</div>
-            <div class="news--footer">
-              <div class="date">{{ block.settings.date }}</div>
-              <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow">
+            <div class="news--content">
+              <img src="{{ block.settings.icon | image_url: height: 32}}" alt="Icon">
+              <div class="news--title">{{ block.settings.title }}</div>
+              <div class="news--footer">
+                <div class="news--date">{{ block.settings.date }}</div>
+                <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow">
+              </div>
             </div>
           </div>
       {% endcase %}

@@ -184,4 +184,8 @@
     .news--element--container .news--content{
         padding: 30px;
     }
+
+    .news--blocks--container{
+        width: 112vw;
+    }
 }

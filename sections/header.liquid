@@ -16,7 +16,7 @@
       {% endcase %}
     {% endfor %}
   </nav>
-  <img src="{{ 'burger.svg' | asset_url }}" alt="Burger" class="burgerIcon">
+  <img src="{{ 'burger.svg' | asset_url }}" alt="Burger" class="burgerIcon" onclick="Toggle()">
   <nav class="navbarAdaptive">
     <div class="navbarAdaptive--header">
       {% for block in section.blocks %}
@@ -25,7 +25,7 @@
             <img src="{{ block.settings.logo | image_url: width: 145 }}" alt="Company" class="logoAdaptive">
         {% endcase %}
       {% endfor %}
-      <img src="{{ 'cross.svg' | asset_url }}" alt="Cross" class="crossIcon">
+      <img src="{{ 'cross.svg' | asset_url }}" alt="Cross" class="crossIcon" onclick="Toggle()">
     </div>
     <div class="nav--elements--adaptive">
       {% for block in section.blocks %}
@@ -46,6 +46,12 @@
     {% endfor %}
   </nav>
 </div>
+
+<script>
+  function Toggle(){
+    document.querySelector('.navbarAdaptive').classList.toggle('active');
+  }
+</script>
 
 {% schema %}
 {

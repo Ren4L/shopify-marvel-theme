@@ -35,6 +35,9 @@ nav{
     display: none;
     cursor: pointer;
 }
+
+.crossIcon{cursor: pointer}
+
 .navbarAdaptive{
     position: fixed;
     display: flex;
@@ -42,9 +45,14 @@ nav{
     width: 100vw;
     height: 100vh;
     left: 0;
-    top: 0;
+    top: -100vh;
     z-index: 6;
     background: white;
+    transition: 1s ease-in-out;
+}
+
+.active{
+    top: 0;
 }
 
 .navbarAdaptive--header{

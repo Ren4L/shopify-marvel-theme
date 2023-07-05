@@ -71,6 +71,10 @@ nav{
     font-weight: 700;
 }
 
+.header--button{
+    margin-bottom: 56px;
+}
+
 @media (max-width: 800px) {
     .navbar{display: none}
     .burgerIcon{display: flex}

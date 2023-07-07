@@ -4,18 +4,6 @@
   "sections": {
     "footer": {
       "type": "footer",
-      "blocks": {
-        "39864f34-bf2f-4977-9aae-65b5e8714dd1": {
-          "type": "contact",
-          "settings": {
-            "mail": "info@marvelpowergroup.com",
-            "icon": "shopify:\/\/shop_images\/Group_112.svg"
-          }
-        }
-      },
-      "block_order": [
-        "39864f34-bf2f-4977-9aae-65b5e8714dd1"
-      ],
       "settings": {
         "title": "Contact"
       }

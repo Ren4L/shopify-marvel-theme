@@ -2,12 +2,7 @@
 
 <div class="services--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'paragraph1' %}
-        <div class="paragraph1">{{ block.settings.paragraph1 }}</div>
-    {% endcase %}
-  {% endfor %}
+  <div class="paragraph1">{{ section.settings.paragraph1 }}</div>
   <div class="services--blocks--container">
     {% for block in section.blocks %}
       {% case block.type %}
@@ -20,12 +15,7 @@
       {% endcase %}
     {% endfor %}
   </div>
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'paragraph2' %}
-        <div class="paragraph2">{{ block.settings.paragraph2 }}</div>
-    {% endcase %}
-  {% endfor %}
+  <div class="paragraph2">{{ section.settings.paragraph2 }}</div>
 </div>
 
 {% schema %}

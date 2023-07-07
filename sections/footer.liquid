@@ -3,19 +3,14 @@
 <div class="footer--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
   <div class="column">
-    {% for block in section.blocks %}
-      {% case block.type %}
-        {% when 'contact' %}
-          <div class="mail">Email us here:<br/> <a href="mailto:{{ block.settings.mail }}">{{ block.settings.mail }}</a></div>
-          <form class="contact--form">
-            <div class="title">Stay in the loop by getting on our mailing list</div>
-            <input name="name" type="text" placeholder="NAME*">
-            <input name="email" type="email" placeholder="E-MAIL*">
-            <input name="company" type="text" placeholder="COMPANY*">
-            <button class="home--button footer--button">SEND {% render 'fork' %}</button>
-          </form>
-      {% endcase %}
-    {% endfor %}
+    <div class="mail">Email us here:<br/> <a href="mailto:{{ section.settings.mail }}">{{ section.settings.mail }}</a></div>
+    <form class="contact--form">
+      <div class="title">Stay in the loop by getting on our mailing list</div>
+      <input name="name" type="text" placeholder="NAME*">
+      <input name="email" type="email" placeholder="E-MAIL*">
+      <input name="company" type="text" placeholder="COMPANY*">
+      <button class="home--button footer--button">SEND {% render 'fork' %}</button>
+    </form>
   </div>
 </div>
 
@@ -29,26 +24,14 @@
       "id": "title",
       "label": "Title section",
       "default": "Contact"
+    },
+    {
+      "type": "text",
+      "id": "mail",
+      "label": "Email"
     }
   ],
   "blocks": [
-    {
-      "type": "contact",
-      "name": "Contact",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "mail",
-          "label": "Email"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Icon button"
-        }
-      ]
-    }
   ]
 }
 {% endschema %}

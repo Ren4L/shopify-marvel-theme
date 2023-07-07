@@ -1,40 +1,43 @@
 {{ 'home.css' | asset_url | stylesheet_tag }}
 
 {% for block in section.blocks %}
-    {% case block.type %}
-        {% when 'image' %}
-            <div class="home--container" id="Home" style="background: linear-gradient(to top, rgba(0,0,0, .8), transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
-                <div class="home--bottom">
-                  {% for block in section.blocks %}
-                    {% case block.type %}
-                      {% when 'title' %}
-                        <h1>{{ block.settings.title }}</h1>
-                    {% endcase %}
-                  {% endfor %}
-                  {% for block in section.blocks %}
-                    {% case block.type %}
-                      {% when 'support' %}
-                        <h2>{{ block.settings.support }}</h2>
-                    {% endcase %}
-                  {% endfor %}
-                    {% for block in section.blocks %}
-                      {% case block.type %}
-                        {% when 'button' %}
-                          <button class="home--button {{ block.settings.scroll }} scroll--btn">
-                            {{ block.settings.text }}
-                            {% render 'fork' %}
-                          </button>
-                      {% endcase %}
-                    {% endfor %}
-                  <div class="scroll--line--container">
-                    <div class="line"></div>
-                    <div class="text">Scroll for more</div>
-                  </div>
-                </div>
-            </div>
-    {% endcase %}
+  {% case block.type %}
+    {% when 'image' %}
+      <div
+        class="home--container"
+        id="Home"
+        style="background: linear-gradient(to top, rgba(0,0,0, .8), transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat"
+      >
+        <div class="home--bottom">
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'title' %}
+                <h1>{{ block.settings.title }}</h1>
+            {% endcase %}
+          {% endfor %}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'support' %}
+                <h2>{{ block.settings.support }}</h2>
+            {% endcase %}
+          {% endfor %}
+          {% for block in section.blocks %}
+            {% case block.type %}
+              {% when 'button' %}
+                <button class="home--button {{ block.settings.scroll }} scroll--btn">
+                  {{ block.settings.text }}
+                  {% render 'fork' %}
+                </button>
+            {% endcase %}
+          {% endfor %}
+          <div class="scroll--line--container">
+            <div class="line"></div>
+            <div class="text">Scroll for more</div>
+          </div>
+        </div>
+      </div>
+  {% endcase %}
 {% endfor %}
-
 
 {% schema %}
 {
@@ -46,45 +49,24 @@
       "id": "title",
       "label": "Title section",
       "default": "Home"
+    },
+    {
+      "type": "text",
+      "id": "titleSection",
+      "label": "Title text"
+    },
+    {
+      "type": "text",
+      "id": "support",
+      "label": "Support text"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Background image"
     }
   ],
   "blocks":[
-    {
-      "name": "Title",
-      "type": "title",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Title section"
-        }
-      ]
-    },
-    {
-      "name": "Support text",
-      "type": "support",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "text",
-          "id": "support",
-          "label": "Support text"
-        }
-      ]
-    },
-    {
-      "name": "Background image",
-      "type": "image",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Background image"
-        }
-      ]
-    },
     {
       "name": "Button",
       "type": "button",

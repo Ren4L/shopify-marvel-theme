@@ -22,7 +22,7 @@
                         {% when 'button' %}
                           <button class="home--button {{ block.settings.scroll }} scroll--btn">
                             {{ block.settings.text }}
-                            {{ block.settings.icon | image_url: width: 20 | image_tag }}
+                            {% render 'fork' %}
                           </button>
                       {% endcase %}
                     {% endfor %}
@@ -94,11 +94,6 @@
           "type": "text",
           "id": "text",
           "label": "Button text"
-        },
-        {
-          "type": "image_picker",
-          "id": "icon",
-          "label": "Button icon"
         },
         {
           "type": "text",

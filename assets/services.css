@@ -73,7 +73,7 @@
     padding-right: 10px;
 }
 
-.service--block img{
+.service--block svg{
     cursor: pointer;
     margin-top: 32px;
 }

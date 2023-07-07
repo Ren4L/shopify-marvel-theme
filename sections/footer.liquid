@@ -12,7 +12,7 @@
             <input name="name" type="text" placeholder="NAME*">
             <input name="email" type="email" placeholder="E-MAIL*">
             <input name="company" type="text" placeholder="COMPANY*">
-            <button class="home--button footer--button">SEND {{ block.settings.icon | image_url: width: 20 | image_tag }}</button>
+            <button class="home--button footer--button">SEND {% render 'fork' %}</button>
           </form>
       {% endcase %}
     {% endfor %}

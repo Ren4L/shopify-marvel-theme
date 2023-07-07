@@ -141,12 +141,14 @@
 }
 
 .cv .social{
-    height: 24px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 24px !important;
+    align-self: flex-end;
+    width: 70px;
 }
 
-.cv .social{
-    align-self: flex-end;
-}
 
 
 @media (max-width: 1300px) {

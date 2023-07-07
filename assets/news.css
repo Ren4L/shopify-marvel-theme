@@ -127,11 +127,21 @@
 .pagination--el{
     cursor: pointer;
     opacity: .5;
+    width: 8px;
+    height: 8px;
+    fill: none;
+}
+
+.pagination--el rect{
+    width: 8px !important;
+    height: 8px !important;
+    fill: #F9D023;
 }
 
 .activePag{
     opacity: 1;
 }
+
 
 @media (max-width: 1300px) {
     .news--container .arrowRight{

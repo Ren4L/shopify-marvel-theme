@@ -2,7 +2,7 @@
 
 <div class="news--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
-  <img src="{{ 'sliderArrow.svg' | asset_url }}" onclick="slideLeft()" class="arrow arrowLeft" alt="Left Arrow">
+  {% render 'sliderArrow', class: 'arrow arrowLeft', onclick: 'slideLeft()' %}
   <div class="news--blocks--container">
     <div class="news--slider--container">
       {% for block in section.blocks %}
@@ -15,7 +15,7 @@
                 <div class="news--title">{{ block.settings.title }}</div>
                 <div class="news--footer">
                   <div class="news--date">{{ block.settings.date }}</div>
-                  <img src="{{ 'ArrowYellow.svg' | asset_url }}" alt="Arrow">
+                  {% render 'arrow', color: '#F9D023' %}
                 </div>
               </div>
             </div>
@@ -25,7 +25,7 @@
   </div>
   <div class="pagination--container">
   </div>
-  <img src="{{ 'sliderArrow.svg' | asset_url }}" onclick="slideRight()" class="arrow arrowRight" alt="Left Arrow">
+  {% render 'sliderArrow', class: 'arrow arrowRight', onclick: 'slideRight()' %}
 </div>
 
 <script>
@@ -45,24 +45,23 @@
   function RenderPagination(){
     document.querySelector('.pagination--container').innerHTML = '';
     for (let i = 0; i < document.querySelector('.news--slider--container').children.length; i++) {
-      let img = document.createElement('img');
-      img.src = "{{ 'rectangleYellow.svg' | asset_url }}";
+      let className = 'pagination--el';
       if (i === 0)
-        img.className = 'pagination--el activePag';
-      else
-        img.className = 'pagination--el';
-      img.setAttribute('data-id', i);
-      img.addEventListener('click', ClickPagination);
-      document.querySelector('.pagination--container').append(img);
+        className = 'pagination--el activePag';
+
+      let img = `<svg width="8" height="8" class="${className}" onclick="ClickPagination(this)" data-id="${i}" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="8" height="8" fill="#F9D023"/>
+                </svg>`;
+      document.querySelector('.pagination--container').innerHTML += img;
     }
   }
 
   function ClickPagination(e){
     if (flag) {
       flag = false;
-      sliderContainer.style.marginLeft =  -280 * +e.target.dataset.id + 'px';
+      sliderContainer.style.marginLeft =  -280 * +e.dataset.id + 'px';
       document.querySelector('.activePag').classList.toggle('activePag');
-      e.target.classList.toggle('activePag');
+      e.classList.toggle('activePag');
       setTimeout(() => flag = true, 1000);
     }
   }

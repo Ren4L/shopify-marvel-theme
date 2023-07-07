@@ -2,15 +2,10 @@
 
 <div class="mission--container" id="{{ section.settings.title }}">
   <h1>{{ section.settings.title }}</h1>
-  {% for block in section.blocks %}
-    {% case block.type %}
-      {% when 'block' %}
-        <div class="mission--image--text--container">
-          <img src="{{ block.settings.image | image_url: width: 400}}" alt="Mission">
-          <div class="text"><strong>{{ block.settings.bold }}</strong>{{ block.settings.text }}</div>
-        </div>
-    {% endcase %}
-  {% endfor %}
+  <div class="mission--image--text--container">
+    <img src="{{ section.settings.image | image_url: width: 400}}" alt="Mission">
+    <div class="text"><strong>{{ section.settings.bold }}</strong>{{ section.settings.text }}</div>
+  </div>
   <div class="missions--container">
     {% for block in section.blocks %}
       {% case block.type %}
@@ -35,31 +30,24 @@
       "id": "title",
       "label": "Title section",
       "default": "Mission"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "text",
+      "id": "bold",
+      "label": "Bold text"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text"
     }
   ],
   "blocks":[
-    {
-      "type": "block",
-      "name": "Mission content",
-      "limit": 1,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Image"
-        },
-        {
-          "type": "text",
-          "id": "bold",
-          "label": "Bold text"
-        },
-        {
-          "type": "text",
-          "id": "text",
-          "label": "Text"
-        }
-      ]
-    },
     {
       "name": "Missions",
       "type": "missions",

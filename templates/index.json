@@ -24,14 +24,6 @@
     "mission": {
       "type": "mission",
       "blocks": {
-        "9ac36968-8737-4be1-886a-733ca435a1ba": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/2438_2.jpg",
-            "bold": "Energy Transition is our core and only focus.",
-            "text": "We structure complex, meaningfully large renewable natural gas (RNG) and power transactions for companies committed to environmentally-sound, commercially-ready solutions. Our principals are experienced practitioners who have run companies, originated and closed complex deals, advocated and negotiated favorable policy and advanced technological innovation. With over three decades of combined experience in renewables specifically, our customers chose us, every time, for our unparalleled industry knowledge, market acumen, professionalism and commitment to their prosperity."
-          }
-        },
         "2b49b820-d4f2-443c-bf2f-bcb747a9cf02": {
           "type": "missions",
           "settings": {
@@ -74,7 +66,6 @@
         }
       },
       "block_order": [
-        "9ac36968-8737-4be1-886a-733ca435a1ba",
         "2b49b820-d4f2-443c-bf2f-bcb747a9cf02",
         "826dcd15-6b0d-4d89-ad74-6c56fbe5f263",
         "b983aab9-e945-47ee-9805-04f98538e4c7",
@@ -82,7 +73,10 @@
         "38d7ac6a-478a-4719-bf8a-33b06cbbeb8e"
       ],
       "settings": {
-        "title": "Mission"
+        "title": "Mission",
+        "image": "shopify:\/\/shop_images\/2438_2.jpg",
+        "bold": "Energy Transition is our core and only focus.",
+        "text": "We structure complex, meaningfully large renewable natural gas (RNG) and power transactions for companies committed to environmentally-sound, commercially-ready solutions. Our principals are experienced practitioners who have run companies, originated and closed complex deals, advocated and negotiated favorable policy and advanced technological innovation. With over three decades of combined experience in renewables specifically, our customers chose us, every time, for our unparalleled industry knowledge, market acumen, professionalism and commitment to their prosperity."
       }
     },
     "services": {

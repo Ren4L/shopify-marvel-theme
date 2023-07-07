@@ -4,7 +4,7 @@
     align-items: flex-end;
     justify-content: center;
     width: 100vw;
-    height: 123vh;
+    /*height: 123vh;*/
     font-size: 25px;
     color: white;
 }
@@ -17,21 +17,24 @@
     font-size: 1em;
     width: 100%;
     height: 60%;
-    padding: 0 15% 20px;
+    padding: 0 265px 54px;
     text-align: center;
-    font-family: "Alata", sans-serif;
+    margin-top: 413px;
 }
 
 .home--container h1{
-    font-size: 4em;
+    font-family: "Alata", sans-serif;
+    font-weight: 400;
+    font-size: 115px;
     letter-spacing: 7px;
 }
 
 .home--container h2{
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
-    font-size: 1em;
+    font-size: 25px;
     line-height: 35px;
+    margin-top: 40px;
 }
 
 .home--button{
@@ -41,21 +44,22 @@
     font-family: "Sofia Pro", sans-serif;
     text-transform: uppercase;
     background: rgba(249, 208, 35, 1);
-    font-size: 0.56em;
-    padding: 17px 40px;
+    font-size: 14px;
+    padding: 19px 40px;
+    margin-top: 80px;
 }
 
 .home--button img{
-    margin-left: 5px;
+    margin-left: 16px;
 }
 
 .scroll--line--container{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     font-size: 1em;
-    height: 140px;
+    margin-top: 104px;
 }
 
 .scroll--line--container .line{
@@ -67,7 +71,8 @@
 .scroll--line--container .text{
     font-family: "Sofia Pro", sans-serif;
     font-weight: 400;
-    font-size: 0.56em;
+    font-size: 14px;
+    margin-top: 22px;
 }
 
 @media (max-width: 1300px) {

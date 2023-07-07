@@ -83,6 +83,31 @@ nav{
     margin-bottom: 56px;
 }
 
+.section--scroll{
+    position: fixed;
+    right: 0;
+    top: calc(50% - 103.5px);
+    z-index: 5;
+}
+
+.section--scroll--deactive--element{
+    visibility: visible;
+}
+
+.section--scroll--active--element--1, .section--scroll--active--element--2,
+.section--scroll--active--element--3, .section--scroll--active--element--4,
+.section--scroll--active--element--5, .section--scroll--active--element--6{
+    visibility: hidden;
+}
+
+.active{
+    visibility: visible;
+}
+
+.deactive{
+    visibility: hidden;
+}
+
 @media (max-width: 800px) {
     .navbar{display: none}
     .burgerIcon{display: flex}

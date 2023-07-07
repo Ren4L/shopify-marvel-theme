@@ -46,10 +46,92 @@
     {% endfor %}
   </nav>
 </div>
+<svg onload="Initial()" class="section--scroll" width="109" height="207" viewBox="0 0 109 207" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <text class="section--scroll--element section--scroll--deactive--element--1 deactive" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="76.8672" y="10.9668">01</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--1 deactive" width="1" height="20" transform="matrix(0 -1 -1 0 116 8)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--1 active" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-1" x="0.394531" y="8.9668">01 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--1 active" width="1" height="60" transform="matrix(0 -1 -1 0 109 5.5)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--deactive--element--2" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="46.9668">02</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--2" width="1" height="20" transform="matrix(0 -1 -1 0 109 44)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--2" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-2" x="0.167969" y="49.9668">02 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--2" width="1" height="60" transform="matrix(0 -1 -1 0 116 46.5)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--deactive--element--3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="85.9669">03</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--3" width="1" height="20" transform="matrix(0 -1 -1 0 109 83.0001)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--3" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-3" x="0.724609" y="88.9668">03 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--3" width="1" height="60" transform="matrix(0 -1 -1 0 121 85.5)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--deactive--element--4" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="124.967">04</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--4" width="1" height="20" transform="matrix(0 -1 -1 0 109 122)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--4" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-4" x="0.458984" y="128.102">04 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--4" width="1" height="60" transform="matrix(0 -1 -1 0 108 124.5)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--deactive--element--5" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="163.967">05</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--5" width="1" height="20" transform="matrix(0 -1 -1 0 109 161)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--5" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-5" x="0.0644531" y="166.967">05 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--5" width="1" height="60" transform="matrix(0 -1 -1 0 107 163.5)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--deactive--element--6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="202.967">06</tspan></text>
+  <rect class="section--scroll--element section--scroll--deactive--element--6" width="1" height="20" transform="matrix(0 -1 -1 0 109 200)" fill="white"/>
+
+  <text class="section--scroll--element section--scroll--active--element--6" fill="white" xml:space="preserve" style="white-space: pre" font-family="Arial" font-size="10" letter-spacing="0px"><tspan class="scrollBar-active-6" x="0.591797" y="205.967">06 </tspan></text>
+  <rect class="section--scroll--element section--scroll--active--element--6" width="1" height="60" transform="matrix(0 -1 -1 0 117 202.5)" fill="white"/>
+</svg>
 
 <script>
+  const NAVBAR_ARRAY = [
+          "Home",
+    {% for block in section.blocks %}
+      {% case block.type %}
+        {% when 'navbar' %}
+          "{{ block.settings.navEl }}",
+      {% endcase %}
+    {% endfor %}
+  ];
+
+  let activeSection = NAVBAR_ARRAY[0];
+
+  let Initial = () => {
+    for (let i = 0; i < NAVBAR_ARRAY.length; i++)
+      document.querySelector(`.scrollBar-active-${i+1}`).innerHTML = `0${i+1} ${NAVBAR_ARRAY[i]}`;
+  };
+
   function Toggle(){
     document.querySelector('.navbarAdaptive').classList.toggle('active');
+  }
+
+  window.addEventListener('scroll', Scroll);
+
+  function Scroll(e){
+    for (let i = 0; i < NAVBAR_ARRAY.length; i++) {
+      activeSection = NAVBAR_ARRAY[i];
+      let elemDom = document.querySelector(`#${NAVBAR_ARRAY[i]}`);
+      let posTop = elemDom.getBoundingClientRect().top;
+      if (posTop + (elemDom.clientHeight/2.5) <= window.innerHeight && posTop + elemDom.clientHeight >= window.innerHeight && NAVBAR_ARRAY[i] === activeSection) {
+        switch (i) {
+          case 0:
+          case 5:
+            document.querySelectorAll('.section--scroll--element').forEach((el)=> el.style.fill = "white");
+            break;
+          case 1:
+          case 2:
+          case 3:
+          case 4:
+            document.querySelectorAll('.section--scroll--element').forEach((el)=> el.style.fill = "black");
+            break;
+        }
+        document.querySelectorAll('.active').forEach((el) => el.classList.toggle('active'));
+        document.querySelectorAll(`.section--scroll--active--element--${i+1}`).forEach((el) => el.classList.toggle('active'));
+        document.querySelectorAll('.deactive').forEach((el) => el.classList.toggle('deactive'));
+        document.querySelectorAll(`.section--scroll--deactive--element--${i+1}`).forEach((el) => el.classList.toggle('deactive'));
+      }
+    }
   }
 </script>
 

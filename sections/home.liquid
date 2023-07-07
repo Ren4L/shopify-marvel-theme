@@ -3,7 +3,7 @@
 {% for block in section.blocks %}
     {% case block.type %}
         {% when 'image' %}
-            <div class="home--container" style="background: linear-gradient(to top, rgba(0,0,0, .8), transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
+            <div class="home--container" id="Home" style="background: linear-gradient(to top, rgba(0,0,0, .8), transparent), url({{ block.settings.image | image_url: width: 1640}}) 50% 50%/cover no-repeat">
                 <div class="home--bottom">
                   {% for block in section.blocks %}
                     {% case block.type %}
@@ -30,20 +30,6 @@
                     <div class="line"></div>
                     <div class="text">Scroll for more</div>
                   </div>
-                  <svg class="section--menu" width="109" height="207" viewBox="0 0 109 207" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="46.9668">02</tspan></text>
-                    <rect width="1" height="20" transform="matrix(0 -1 -1 0 109 44)" fill="white"/>
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="124.967">04</tspan></text>
-                    <rect width="1" height="20" transform="matrix(0 -1 -1 0 109 122)" fill="white"/>
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="163.967">05</tspan></text>
-                    <rect width="1" height="20" transform="matrix(0 -1 -1 0 109 161)" fill="white"/>
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="202.967">06</tspan></text>
-                    <rect width="1" height="20" transform="matrix(0 -1 -1 0 109 200)" fill="white"/>
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="69.8672" y="85.9669">03</tspan></text>
-                    <rect width="1" height="20" transform="matrix(0 -1 -1 0 109 83.0001)" fill="white"/>
-                    <text fill="white" xml:space="preserve" style="white-space: pre" font-family="Sofia Pro" font-size="10" letter-spacing="0px"><tspan x="0.394531" y="8.9668">01 {{ section.settings.title }}</tspan></text>
-                    <rect width="1" height="60" transform="matrix(0 -1 -1 0 109 5.5)" fill="white"/>
-                  </svg>
                 </div>
             </div>
     {% endcase %}

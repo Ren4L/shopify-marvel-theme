@@ -75,19 +75,12 @@
       "settings": {
         "title": "Mission",
         "image": "shopify:\/\/shop_images\/2438_2.jpg",
-        "bold": "Energy Transition is our core and only focus.",
-        "text": "We structure complex, meaningfully large renewable natural gas (RNG) and power transactions for companies committed to environmentally-sound, commercially-ready solutions. Our principals are experienced practitioners who have run companies, originated and closed complex deals, advocated and negotiated favorable policy and advanced technological innovation. With over three decades of combined experience in renewables specifically, our customers chose us, every time, for our unparalleled industry knowledge, market acumen, professionalism and commitment to their prosperity."
+        "text": "<p><strong>Energy Transition is our core and only focus.<\/strong> We structure complex, meaningfully large renewable natural gas (RNG) and power transactions for companies committed to environmentally-sound, commercially-ready solutions. Our principals are experienced practitioners who have run companies, originated and closed complex deals, advocated and negotiated favorable policy and advanced technological innovation. With over three decades of combined experience in renewables specifically, our customers chose us, every time, for our unparalleled industry knowledge, market acumen, professionalism and commitment to their prosperity.<\/p>"
       }
     },
     "services": {
       "type": "services",
       "blocks": {
-        "5d6539f3-6933-400f-8e9b-0c823be7a6a3": {
-          "type": "paragraph1",
-          "settings": {
-            "paragraph1": "Our clients are at the forefront of energy transition and innovation. Their mandate is complex: balance project needs with customer demands, lofty investment targets and development complexities. Layer on market volatility and regulatory risk and the scope becomes less manageable in-house. This is where Marvel comes in. We understand the task and bring deep expertise to addressing these challenges."
-          }
-        },
         "a4f7f3c8-e208-428e-b4d5-0775105c449b": {
           "type": "block",
           "settings": {
@@ -108,23 +101,17 @@
             "title": "Market Development",
             "points": "<ul><li>New venture strategy<br\/><\/li><li>Go-to-market architecture<br\/><\/li><li>M&A support<br\/><\/li><li>Marketing and partnerships<\/li><\/ul>"
           }
-        },
-        "d8fa945f-a768-4f36-94e4-3c78a029dbef": {
-          "type": "paragraph2",
-          "settings": {
-            "paragraph2": "Our clients are time constrained and under-resourced. Agendas shift, budgets move and priorities change. We understand. We are agile, creative and immediately responsive to your various working styles, governance requirements and evolving needs."
-          }
         }
       },
       "block_order": [
-        "5d6539f3-6933-400f-8e9b-0c823be7a6a3",
         "a4f7f3c8-e208-428e-b4d5-0775105c449b",
         "acd802ad-6bf0-4988-9a6d-79776935c9b8",
-        "4eca294b-c1b4-4527-bc9b-91d1c4bf5df1",
-        "d8fa945f-a768-4f36-94e4-3c78a029dbef"
+        "4eca294b-c1b4-4527-bc9b-91d1c4bf5df1"
       ],
       "settings": {
-        "title": "Services"
+        "title": "Services",
+        "paragraph1": "",
+        "paragraph2": ""
       }
     },
     "team": {

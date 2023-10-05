@@ -1,13 +1,7 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-  {% paginate collection.Games by 20 %}
-    {% for product in collection.Games %}
-      <p>1</p>
-    {% endfor %}
-
-    {{ paginate | default_pagination }}
-  {% endpaginate %}
+  <p>{{ collection }}</p>
 </div>
 
   {% schema %}

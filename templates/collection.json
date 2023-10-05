@@ -1,0 +1,77 @@
+{
+  "sections": {
+    "news": {
+      "type": "news",
+      "blocks": {
+        "3d7d0cbe-be69-47bb-9876-22e20ea40d7b": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/denys-nevozhai-dHNF-iBfbrA-unsplash.jpg",
+            "icon": "shopify:\/\/shop_images\/1_logo.svg",
+            "title": "Marvel Turns 3, Expands Biomethane Services to Canada and Europe",
+            "date": "July 06, 2022"
+          }
+        },
+        "64c882d1-0c19-4881-9a89-7ea7547ab406": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/i2.jpg",
+            "icon": "shopify:\/\/shop_images\/2_logo.svg",
+            "title": "Marvel Celebrates Anniversary, $1B in Closed Transactions",
+            "date": "July 13, 2021"
+          }
+        },
+        "5d4538b3-6d14-4faf-bfaa-d18211f0d972": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/3i.jpg",
+            "icon": "shopify:\/\/shop_images\/3_logo.svg",
+            "title": "TRC and Marvel Announce RNG Development Support Partnership",
+            "date": "May 20, 2021"
+          }
+        },
+        "46c8b00b-f16e-4ea1-bf10-ecae3f785c78": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/i2.jpg",
+            "icon": "shopify:\/\/shop_images\/2_logo.svg",
+            "title": "test",
+            "date": "test"
+          }
+        },
+        "45c8b00b-f16e-4ea1-bf10-ecae3f785c78": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/i2.jpg",
+            "icon": "shopify:\/\/shop_images\/2_logo.svg",
+            "title": "test1",
+            "date": "test1"
+          }
+        },
+        "44c8b00b-f16e-4ea1-bf10-ecae3f785c78": {
+          "type": "news",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/i2.jpg",
+            "icon": "shopify:\/\/shop_images\/2_logo.svg",
+            "title": "test2",
+            "date": "test2"
+          }
+        }
+      },
+      "block_order": [
+        "3d7d0cbe-be69-47bb-9876-22e20ea40d7b",
+        "64c882d1-0c19-4881-9a89-7ea7547ab406",
+        "5d4538b3-6d14-4faf-bfaa-d18211f0d972",
+        "46c8b00b-f16e-4ea1-bf10-ecae3f785c78",
+        "45c8b00b-f16e-4ea1-bf10-ecae3f785c78",
+        "44c8b00b-f16e-4ea1-bf10-ecae3f785c78"
+      ],
+      "settings": {
+        "title": "News"
+      }
+    }
+  },
+  "order": [
+    "news"
+  ]
+}

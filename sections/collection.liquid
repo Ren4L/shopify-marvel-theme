@@ -1,7 +1,7 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-  <p>{{ section.settings.collection.products_count }}</p>
+  <p>{{ section.settings.collection.products[0].title }}</p>
 </div>
 
   {% schema %}

@@ -2,7 +2,6 @@
   "sections": {
     "collection": {
       "type": "collection",
-      "disabled": true,
       "settings": {
       }
     }

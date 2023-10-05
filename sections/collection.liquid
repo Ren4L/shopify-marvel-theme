@@ -1,9 +1,28 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-  {% for product in section.settings.collection.products %}
-    {% render 'productElement', id: product.id, image: product.images[0], title: product.title, description: product.description, price: product.price %}
-  {% endfor %}
+  {% form 'product', product %}
+    <label class="product-option">Options</label>
+    <select class="product-select" name="id">
+      {% for variant in product.variants %}
+        <option
+                {% if selectedVariant.id == variant.id %}
+                  selected
+                {% endif %}
+                value="{{ variant.id }}"
+        >
+          {{ variant.title }}
+        </option>
+      {% endfor %}
+    </select>
+
+    <div class="product-quantity">
+      <label for="quantity">Quantity</label>
+      <input name="quantity" id="quantity" value="1">
+    </div>
+
+    <button class="button product-add" type="submit">Add to cart</button>
+  {% endform %}
 </div>
 
   {% schema %}

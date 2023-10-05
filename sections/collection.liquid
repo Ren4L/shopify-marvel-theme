@@ -1,10 +1,13 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-    {%- for product in section.settings.collection.all_tags -%}
+  {% paginate collection.products by 20 %}
+    {% for product in collection.products %}
       <p>1</p>
-      <p>{{ product.title }}</p>
-    {%- endfor -%}
+    {% endfor %}
+
+    {{ paginate | default_pagination }}
+  {% endpaginate %}
 </div>
 
   {% schema %}

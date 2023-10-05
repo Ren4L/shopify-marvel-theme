@@ -2,7 +2,7 @@
 
 <div class="collection--container" >
   {% for product in section.settings.collection.products %}
-    {% render 'productElement', id: product.id, image: product.images[0], title: product.title, discription: product.discription, price: product.price %}
+    {% render 'productElement', id: product.id, image: product.images[0], title: product.title, description: product.description, price: product.price %}
   {% endfor %}
 </div>
 

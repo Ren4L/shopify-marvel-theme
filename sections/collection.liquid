@@ -1,7 +1,8 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-    {%- for product in collection.products -%}
+    {%- for product in section.settings.collection -%}
+      <p>1</p>
       <p>{{ product.title }}</p>
     {%- endfor -%}
 </div>

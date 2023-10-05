@@ -5,7 +5,8 @@
     "footer": {
       "type": "footer",
       "settings": {
-        "title": "Contact"
+        "title": "Contact",
+        "mail": "info@marvelpowergroup.com"
       }
     }
   },

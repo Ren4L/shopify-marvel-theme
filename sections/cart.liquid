@@ -1,0 +1,32 @@
+{{ 'cart.css' | asset_url | stylesheet_tag }}
+
+<div>
+    {% assign i = 0 %}
+    {% for product in cart.items %}
+        <form action="/cart/update">
+            <img src="{{product.image | image_url: width: 256 }}">
+            <h2>{{ product.title }}</h2>
+            <div class="product-quantity">
+                <label for="quantity">Quantity</label>
+                <input name="quantity" type="number" id="quantity" value="{{ product.quantity }}">
+            </div>
+
+            <p><b>{{ product.price | times:product.quantity | money }}</b></p>
+            <input type="hidden" name="product-id" value="{{ product.product_id }}">
+            <input type="hidden" name="product-line" value="{{ i }}">
+            <button class="button" type="submit">Add to cart</button>
+        </form>
+        {% assign i = i | plus:1 %}
+    {% endfor %}
+</div>
+
+{% schema %}
+{
+  "name": "Cart",
+  "tag": "section",
+  "settings":[
+  ],
+  "blocks":[
+  ]
+}
+{% endschema %}

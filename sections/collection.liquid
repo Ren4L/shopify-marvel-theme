@@ -1,23 +1,42 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
-
 <div class="collection--container" >
   {% for product in section.settings.collection.products %}
-    <div data-id="{{ product.id }}" style="width: 300px; display:flex; flex-direction: column; align-items: center; font-size: 20px; border: 1px black solid; border-radius: 15px; padding: 15px; margin: 10px; ">
+    <div style="width: 300px; display:flex; flex-direction: column; align-items: center; font-size: 20px; border: 1px black solid; border-radius: 15px; padding: 15px; margin: 10px; ">
       {% form 'product', product %}
         <img src="{{product.images[0] | image_url: width: 256 }}">
         <h2>{{ product.title }}</h2>
         <p>{{ product.description }}</p>
-        <p><b>{{ product.price }}$</b></p>
-        <div class="product-quantity">
-          <label for="quantity">Quantity</label>
-          <input name="quantity" id="quantity" value="1">
-        </div>
+          <select class="product-select" name="id">
+              {% for variant in product.variants %}
+                  <option
+                          {% if selectedVariant.id == variant.id %}
+                              selected
+                          {% endif %}
+                          value="{{ variant.id }}"
+                  >
+                      {{ variant.title }}
+                  </option>
+              {% endfor %}
+          </select>
+          <div class="product-quantity">
+              <label for="quantity">Quantity</label>
+              <input name="quantity" type="number" id="quantity" value="1">
+          </div>
 
-        <button class="button product-add" type="submit">Add to cart</button>
+          <p><b>{{ product.price | money }}</b></p>
+        <button class="button" type="submit">Add to cart</button>
       {% endform %}
     </div>
   {% endfor %}
 </div>
+<button class="button button--cart">Cart</button>
+<button class="button button--clear--cart">Clear cart</button>
+<div class="ModalCart--container">
+    <div class="ModalCart"></div>
+</div>
+
+{{ 'cart.js' | asset_url | script_tag }}
+
 
   {% schema %}
   {

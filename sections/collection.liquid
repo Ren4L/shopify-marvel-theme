@@ -1,13 +1,9 @@
 {{ 'collection.css' | asset_url | stylesheet_tag }}
 
 <div class="collection--container" >
-  <h1>123</h1>
-  <h1>123</h1>
-  <h1>123</h1>
-  <h1>123</h1>
-  <h1>123</h1>
-  <h1>123</h1>
-  <h1>123</h1>
+    {%- for product in collection.products -%}
+      <p>{{ product.title }}</p>
+    {%- endfor -%}
 </div>
 
   {% schema %}

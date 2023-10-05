@@ -2,8 +2,8 @@
 
 <div class="collection--container" >
   {% for product in section.settings.collection.products %}
-    <div style=" display:flex; flex-direction: row; flex-wrap: wrap; align-items: center; font-size: 20px; border: 1px black solid; border-radius: 15px; padding: 15px; margin: 10px; ">
-      <img src="{{product.images[0] | image_url: width: 512 }}" alt="">
+    <div data-id="{{ product.id }}" style=" display:flex; flex-direction: column; align-items: center; font-size: 20px; border: 1px black solid; border-radius: 15px; padding: 15px; margin: 10px; ">
+      <img src="{{product.images[0] | image_url: width: 128 }}">
       <h2>{{ product.title }}</h2>
       <p>{{ product.description }}</p>
       <p><b>{{ product.price }}$</b></p>

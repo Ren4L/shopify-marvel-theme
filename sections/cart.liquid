@@ -15,6 +15,7 @@
             <input type="hidden" name="product-id" value="{{ product.product_id }}">
             <input type="hidden" name="product-line" value="{{ i }}">
             <button class="button" type="submit">Add to cart</button>
+            <button class="button button--delete" type="submit">Delete</button>
         </form>
         {% assign i = i | plus:1 %}
     {% endfor %}

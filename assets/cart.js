@@ -29,6 +29,7 @@ document.querySelector('.button--cart').addEventListener('click', async e => {
     document.querySelector('.ModalCart').innerHTML = cart?.cart;
     document.querySelector(".ModalCart--container").classList.toggle('active');
     document.querySelectorAll('form[action="/cart/update"]').forEach(el => el.addEventListener('submit', AddEventUpdateForm));
+    document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
 })
 document.querySelector('.button--clear--cart').addEventListener('click', async e => {
     await fetch("/cart/clear.json", {method: "POST"})
@@ -38,22 +39,25 @@ document.querySelector('.button--clear--cart').addEventListener('click', async e
 
 async function AddEventUpdateForm(event) {
     event.preventDefault();
-    event.stopPropagation();
-    event.stopImmediatePropagation();
 
     const form = new FormData(event.target);
-    let resChange = await fetch("/cart/change.json", {
+    let resChange = await fetch("/cart/change", {
         method: "POST",
         body: {
             'line': +form.get('product-line')+1,
             'quantity': +form.get('quantity')
         },
     });
-
+    console.log(resChange);
     if (resChange.status === 200) {
         const res = await fetch("/?sections=cart");
         const cart = await res.json();
         document.querySelector('.ModalCart').innerHTML = cart?.cart;
         document.querySelectorAll('form[action="/cart/update"]').forEach(el => el.addEventListener('submit', AddEventUpdateForm));
+        document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
     }
+}
+
+async function DeleteOfCart(event){
+    event.preventDefault();
 }

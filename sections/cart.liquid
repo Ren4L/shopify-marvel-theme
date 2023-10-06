@@ -1,7 +1,7 @@
 {{ 'cart.css' | asset_url | stylesheet_tag }}
 
 <div>
-    {% assign i = 0 %}
+    {% assign i = 1 %}
     {% for product in cart.items %}
         <form action="/cart/update">
             <img src="{{product.image | image_url: width: 256 }}">
@@ -12,9 +12,8 @@
             </div>
 
             <p><b>{{ product.price | times:product.quantity | money }}</b></p>
-            <input type="hidden" name="product-id" value="{{ product.product_id }}">
+            <input type="hidden" name="product-id" value="{{ product.key }}">
             <input type="hidden" name="product-line" value="{{ i }}">
-            <button class="button" type="submit">Add to cart</button>
             <button class="button button--delete" type="submit">Delete</button>
         </form>
         {% assign i = i | plus:1 %}

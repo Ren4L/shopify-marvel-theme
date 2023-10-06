@@ -28,7 +28,7 @@ document.querySelector('.button--cart').addEventListener('click', async e => {
     if (cartObjectJson.items.length === 0) return;
     document.querySelector('.ModalCart').innerHTML = cart?.cart;
     document.querySelector(".ModalCart--container").classList.toggle('active');
-    document.querySelectorAll('form[action="/cart/update"]').forEach(el => el.addEventListener('submit', AddEventUpdateForm));
+    document.querySelectorAll('#quantity').forEach(el => el.addEventListener('change', AddEventUpdateForm));
     document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
 })
 document.querySelector('.button--clear--cart').addEventListener('click', async e => {
@@ -38,26 +38,56 @@ document.querySelector('.button--clear--cart').addEventListener('click', async e
 
 
 async function AddEventUpdateForm(event) {
-    event.preventDefault();
 
-    const form = new FormData(event.target);
-    let resChange = await fetch("/cart/change", {
+    const form = new FormData(event.target.parentNode.parentNode);
+    let resChange = await fetch("/cart/change.json", {
         method: "POST",
-        body: {
-            'line': +form.get('product-line')+1,
-            'quantity': +form.get('quantity')
+        headers:{
+            'Content-Type': 'application/json'
         },
+        body: JSON.stringify({
+            'line': +form.get('product-line'),
+            'quantity': +form.get('quantity')
+        }),
     });
     console.log(resChange);
     if (resChange.status === 200) {
         const res = await fetch("/?sections=cart");
         const cart = await res.json();
         document.querySelector('.ModalCart').innerHTML = cart?.cart;
-        document.querySelectorAll('form[action="/cart/update"]').forEach(el => el.addEventListener('submit', AddEventUpdateForm));
+        document.querySelectorAll('#quantity').forEach(el => el.addEventListener('change', AddEventUpdateForm));
         document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
     }
 }
 
 async function DeleteOfCart(event){
     event.preventDefault();
+
+    const form = new FormData(event.target.parentNode);
+    let resChange = await fetch("/cart/change.json", {
+        method: "POST",
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            'line': +form.get('product-line'),
+            'quantity': 0
+        }),
+    });
+    if (resChange.status === 200) {
+        const cartObject = await fetch("/cart.json");
+        const cartObjectJson = await cartObject.json();
+        if (cartObjectJson.items.length === 0) {
+            document.querySelector('.ModalCart').innerHTML = '';
+            document.querySelector(".ModalCart--container").classList.toggle('active');
+            return;
+        }
+
+        const res = await fetch("/?sections=cart");
+        const cart = await res.json();
+        document.querySelector('.ModalCart').innerHTML = cart?.cart;
+        document.querySelectorAll('#quantity').forEach(el => el.addEventListener('change', AddEventUpdateForm));
+        document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
+    }
 }
+

@@ -1,13 +1,25 @@
 {
   "sections": {
+    "collection-header": {
+      "type": "collection-header",
+      "settings": {
+      }
+    },
     "collection": {
       "type": "collection",
       "settings": {
         "collection": "games"
       }
+    },
+    "collection-footer": {
+      "type": "collection-footer",
+      "settings": {
+      }
     }
   },
   "order": [
-    "collection"
+    "collection-header",
+    "collection",
+    "collection-footer"
   ]
 }

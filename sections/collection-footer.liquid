@@ -1,0 +1,27 @@
+
+<div class="ModalCart--container">
+    <div class="ModalCart"></div>
+</div>
+
+<div class="loadMoreCont">
+    <button class="button loadMore">Load more</button>
+    {% render 'loader', class: 'loader' %}
+</div>
+
+<div class="button--cont">
+    <button class="button button--cart">Cart</button>
+    <button class="button button--clear--cart">Clear cart</button>
+</div>
+
+{{ 'cart.js' | asset_url | script_tag }}
+
+{% schema %}
+{
+  "name": "Collection",
+  "tag": "div",
+  "settings":[
+  ],
+  "blocks":[
+  ]
+}
+{% endschema %}

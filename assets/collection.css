@@ -4,9 +4,9 @@
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
-    padding: 50px 15%;
+    justify-content: space-around;
     font-size: 90px;
-    margin-top: 100px;
+    width: 100%;
 }
 
 .button{
@@ -15,4 +15,30 @@
     border-radius: 5px;
     padding: 5px;
     margin: 5px;
+}
+
+.button--cont{
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+}
+
+.loadMoreCont{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.loader{
+    display: none !important;
+}
+
+.deActive{
+    display: none;
+}
+
+.active{
+    display: block !important;
 }

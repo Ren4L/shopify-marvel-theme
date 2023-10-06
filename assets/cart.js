@@ -1,3 +1,4 @@
+let pageCount = 2;
 document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
     form.addEventListener("submit", async (event) => {
         event.preventDefault();
@@ -90,4 +91,24 @@ async function DeleteOfCart(event){
         document.querySelectorAll('.button--delete').forEach(el => el.addEventListener('click', DeleteOfCart));
     }
 }
+
+document.querySelector('.loadMore').addEventListener('click', async e => {
+    e.target.classList.toggle('deActive');
+    document.querySelector('.loader').classList.toggle('active');
+    console.log(pageCount)
+    const res = await fetch("/pages/collection?page=" + pageCount++);
+    const page = await res.text();
+    const newElements = new DOMParser().parseFromString(page, "text/html").querySelectorAll('.product');
+    let counter = 0;
+    newElements.forEach(el => {
+        if (!document.querySelector(`[data-id="${el.dataset.id}"]`) && counter < 4){
+            document.querySelector('.collection--container').appendChild(el);
+            counter++;
+        }
+    })
+    if (newElements.length && newElements.length >= 4) {
+        e.target.classList.toggle('deActive');
+    }
+    document.querySelector('.loader').classList.toggle('active');
+})
 

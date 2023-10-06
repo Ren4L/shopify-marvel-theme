@@ -1,20 +1,23 @@
 let pageCount = 2;
-document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
-    form.addEventListener("submit", async (event) => {
-        event.preventDefault();
+initeProduct();
+function initeProduct() {
+    document.querySelectorAll('form[action="/cart/add"]').forEach((form) => {
+        form.addEventListener("submit", async (event) => {
+            event.preventDefault();
 
-        await fetch("/cart/add.json", {
-            method: "POST",
-            body: new FormData(form),
+            await fetch("/cart/add.json", {
+                method: "POST",
+                body: new FormData(form),
+            });
+
+
+            const message = document.createElement("p");
+            message.classList.add("added-to-cart");
+            message.textContent = "Added to cart!";
+            form.appendChild(message);
         });
-
-
-        const message = document.createElement("p");
-        message.classList.add("added-to-cart");
-        message.textContent = "Added to cart!";
-        form.appendChild(message);
     });
-});
+}
 
 document.querySelector(".ModalCart--container").addEventListener('click', e => {
     e.target.classList.toggle('active');
@@ -105,6 +108,7 @@ document.querySelector('.loadMore').addEventListener('click', async e => {
             counter++;
         }
     })
+    initeProduct();
     if (newElements.length && newElements.length >= 4) {
         e.target.classList.toggle('deActive');
     }

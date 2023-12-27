@@ -226,16 +226,6 @@
     },
     "17036850363f877f1e": {
       "type": "apps",
-      "blocks": {
-        "7c1788cf-d6d9-4a74-bfb9-bd82ab6551e0": {
-          "type": "shopify:\/\/apps\/create-product\/blocks\/form_name\/cd4c06bc-e22f-430f-becd-85b3813a01e7",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "7c1788cf-d6d9-4a74-bfb9-bd82ab6551e0"
-      ],
       "settings": {
       }
     }

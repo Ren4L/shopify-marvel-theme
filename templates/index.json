@@ -227,14 +227,14 @@
     "17036850363f877f1e": {
       "type": "apps",
       "blocks": {
-        "96871ea5-e6db-4787-900d-6f74a75a9178": {
+        "d026c5cc-9c84-4359-bfbd-0b8986ed7a58": {
           "type": "shopify:\/\/apps\/create-product\/blocks\/form_name\/cd4c06bc-e22f-430f-becd-85b3813a01e7",
           "settings": {
           }
         }
       },
       "block_order": [
-        "96871ea5-e6db-4787-900d-6f74a75a9178"
+        "d026c5cc-9c84-4359-bfbd-0b8986ed7a58"
       ],
       "settings": {
       }

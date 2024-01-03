@@ -20,7 +20,7 @@
 
     {%- if pageQuerystring contains '18460587851873' -%}
     {%- endif -%}
-
+{{ pageQuerystring }}
     {%- if predictive_search.resources.products.size > 0 -%}
       <h3 id="predictive-search-products">Products</h3>
       <ul role="listbox" aria-labelledby="predictive-search-products">

@@ -223,10 +223,16 @@
       "settings": {
         "title": "News"
       }
+    },
+    "search": {
+      "type": "search",
+      "settings": {
+      }
     }
   },
   "order": [
     "home",
+    "search",
     "mission",
     "services",
     "team",

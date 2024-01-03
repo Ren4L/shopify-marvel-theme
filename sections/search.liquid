@@ -3,8 +3,7 @@
     <form style="display: flex">
         <input type="text" name="terms" placeholder="Search">
         <select name="category">
-            {% assign currentCol = collection.handle %}
-            {% for collection in collections %}
+            {% for collection in section.settings.collections %}
                 {% if collection.handle contains currentCol %}
                     <option value="{{ collection.title }}">{{ collection.title }}</option>
                 {% endif %}
@@ -26,7 +25,7 @@
     },
     {
       "type": "collection",
-      "id": "collection",
+      "id": "collections",
       "label": "Search section"
     }
   ],

@@ -24,6 +24,7 @@
     "search": {
       "type": "search",
       "settings": {
+        "title": "Search"
       }
     },
     "mission": {

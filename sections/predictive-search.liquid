@@ -1,4 +1,5 @@
 {%- if predictive_search.performed -%}
+    <h1>{{ request.params }}</h1>
     <div id="predictive-search-results">
         <h1>{{ predictive_search.categ }}</h1>
         {%- if predictive_search.resources.products.size > 0 -%}

@@ -1,5 +1,6 @@
 {%- if predictive_search.performed -%}
     <div id="predictive-search-results">
+        <h1>{{ predictive_search.categ }}</h1>
         {%- if predictive_search.resources.products.size > 0 -%}
             <h3 id="predictive-search-products">Products</h3>
             <ul role="listbox" aria-labelledby="predictive-search-products">

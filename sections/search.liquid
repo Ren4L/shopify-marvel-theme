@@ -12,3 +12,24 @@
         </select>
     </form>
 </div>
+
+{% schema %}
+{
+  "name": "Search",
+  "tag": "section",
+  "settings":[
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title section",
+      "default": "Search"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Search section"
+    }
+  ],
+  "blocks":[]
+}
+{% endschema %}

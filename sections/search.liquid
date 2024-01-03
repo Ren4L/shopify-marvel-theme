@@ -1,6 +1,6 @@
 <div class="team--container" id="{{ section.settings.title }}">
     <h1>Search</h1>
-    <form style="display: flex" onsubmit="SearchSubmit(this)">
+    <form style="display: flex" id="SearchSubmit">
         <input type="text" name="terms" placeholder="Search">
         <select name="category">
             {% for collection in section.settings.collections %}
@@ -10,6 +10,7 @@
         <button>Search</button>
     </form>
     <script>
+        document.querySelector("#SearchSubmit").addEventListener('submit', SearchSubmit);
         function SearchSubmit(e){
             e.preventDefault();
             console.log(e);

@@ -4,9 +4,7 @@
         <input type="text" name="terms" placeholder="Search">
         <select name="category">
             {% for collection in section.settings.collections %}
-                {% if collection.handle contains currentCol %}
-                    <option value="{{ collection.title }}">{{ collection.title }}</option>
-                {% endif %}
+                <option value="{{ collection.title }}">{{ collection.title }}</option>
             {% endfor %}
         </select>
     </form>

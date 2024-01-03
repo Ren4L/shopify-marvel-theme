@@ -21,6 +21,11 @@
         "image": "shopify:\/\/shop_images\/robert-bye-R-WtV-QyVnY-unsplash.jpg"
       }
     },
+    "search": {
+      "type": "search",
+      "settings": {
+      }
+    },
     "mission": {
       "type": "mission",
       "blocks": {
@@ -222,11 +227,6 @@
       ],
       "settings": {
         "title": "News"
-      }
-    },
-    "search": {
-      "type": "search",
-      "settings": {
       }
     }
   },

@@ -13,7 +13,9 @@
         document.querySelector("#SearchSubmit").addEventListener('submit', SearchSubmit);
         function SearchSubmit(e){
             e.preventDefault();
-            console.log(e);
+            let form = new FormData(e.target);
+            if (!form.get("terms")) return;
+            location.href = `/search/suggest?q=${form.get("terms")}&section_id=predictive-search`;
         }
     </script>
 </div>

@@ -3,8 +3,11 @@
     <form style="display: flex">
         <input type="text" name="terms" placeholder="Search">
         <select name="category">
-            {% for category in page.categories %}
-                <option value="{{ category }}">{{ category }}</option>
+            {% assign currentCol = collection.handle %}
+            {% for collection in collections %}
+                {% if collection.handle contains currentCol %}
+                    <option value="{{ collection.title }}">{{ collection.title }}</option>
+                {% endif %}
             {% endfor %}
         </select>
     </form>

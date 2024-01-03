@@ -1,26 +1,7 @@
 {%- if predictive_search.performed -%}
-  <h1>{{ request.device_type }}</h1>
+  <h1>{{ request.request_url.href }}</h1>
   <div id="predictive-search-results">
-    {%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
-
-    {% comment %} Use string splitting to pull the value from content_for_header and apply some string clean up {% endcomment %}
-    {%- assign pageUrl = contentForQuerystring
-      | split: '"pageurl":"'
-      | last
-      | split: '"'
-      | first
-      | split: '.myshopify.com'
-      | last
-      | replace: '\/', '/'
-      | replace: '%20', ' '
-      | replace: '\u0026', '&'
-    -%}
-
-    {%- assign pageQuerystring = pageUrl | split: '?' | last -%}
-
-    {%- if pageQuerystring contains '18460587851873' -%}
-    {%- endif -%}
-{{ pageQuerystring }}
+    <h1>{{ predictive_search.categ }}</h1>
     {%- if predictive_search.resources.products.size > 0 -%}
       <h3 id="predictive-search-products">Products</h3>
       <ul role="listbox" aria-labelledby="predictive-search-products">

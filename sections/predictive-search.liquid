@@ -1,5 +1,5 @@
 {%- if predictive_search.performed -%}
-  <h1>{{ request.request_url.href }}</h1>
+  <h1>{{ request.device_type }}</h1>
   <div id="predictive-search-results">
     <h1>{{ predictive_search.categ }}</h1>
     {%- if predictive_search.resources.products.size > 0 -%}

@@ -4,7 +4,7 @@
         <input type="text" name="terms" placeholder="Search">
         <select name="category">
             {% for collection in section.settings.collections %}
-                <option selected value="{{ collection.title }}">{{ collection.title }}</option>
+                <option value="{{ collection.title }}">{{ collection.title }}</option>
             {% endfor %}
         </select>
         <button>Search</button>
@@ -14,7 +14,7 @@
         function SearchSubmit(e){
             e.preventDefault();
             let form = new FormData(e.target);
-            if (!form.get("terms")) return;
+            if (!form.get("terms") || !form.get("category")) return;
             location.href = `/search/suggest?q=${form.get("terms")}&section_id=predictive-search&resources[type]=product&categ=${form.get("category")}`;
         }
     </script>

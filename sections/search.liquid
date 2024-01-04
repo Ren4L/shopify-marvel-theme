@@ -15,7 +15,7 @@
             e.preventDefault();
             let form = new FormData(e.target);
             if (!form.get("terms") || !form.get("category")) return;
-            location.href = `/search/suggest?q=${form.get("terms")}&section_id=predictive-search&resources[type]=product&categ=${form.get("category")}`;
+            location.href = `/search/suggest?q=${form.get("terms")}&section_id=predictive-search&categ=${form.get("category")}`;
         }
     </script>
 </div>

@@ -1,5 +1,4 @@
 {%- if predictive_search.performed -%}
-    <h1>{{ request.request_url.href }}</h1>
     <div id="predictive-search-results">
         <h1>{{ predictive_search.categ }}</h1>
         {%- if predictive_search.resources.products.size > 0 -%}
@@ -7,6 +6,7 @@
             <ul role="listbox" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products -%}
                     <li role="option">
+                        <span>{{ product.tags[0] }}</span>
                         <a href="{{ product.url }}">{{ product | image_url: width: 50 | image_tag }}<span>{{ product.title }}</span></a>
                     </li>
                 {%- endfor -%}

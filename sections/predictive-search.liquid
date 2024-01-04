@@ -12,7 +12,7 @@
         | replace: '\u0026', '&'
 -%}
 
-{%- assign pageQuerystring = pageUrl | split: '?' | last -%}
+{%- assign pageQuerystring = pageUrl | split: 'categ=' | last -%}
 
 {%- if predictive_search.performed -%}
     <div id="predictive-search-results">
@@ -22,9 +22,9 @@
             <ul role="listbox" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products -%}
                     {%- for tag in product.tags -%}
-                        {% assign lowercase_tag = "categ=" | tag %}
+                        {% assign lowercase_tag = tag | downcase %}
                         {% assign lowercase_pageQuerystring = pageQuerystring | downcase %}
-                        <span>{{ lowercase_tag }}</span>
+                        <span>{{ lowercase_pageQuerystring }}</span>
                         {%- if lowercase_pageQuerystring contains lowercase_tag -%}
                             <li role="option">
                                 <a href="{{ product.url }}">

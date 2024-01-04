@@ -24,11 +24,7 @@
     "search": {
       "type": "search",
       "settings": {
-        "title": "Search",
-        "collections": [
-          "games",
-          "movies"
-        ]
+        "title": "Search"
       }
     },
     "mission": {

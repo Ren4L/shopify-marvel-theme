@@ -22,9 +22,8 @@
             <ul role="listbox" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products -%}
                     {%- for tag in product.tags -%}
-                        {% assign lowercase_tag = tag %}
-                        <span>{{ lowercase_pageQuerystring }}</span>
-                        {%- if lowercase_pageQuerystring contains lowercase_tag -%}
+                        {% assign lowercase_tag = tag | downcase %}
+                        {%- if pageQuerystring == lowercase_tag -%}
                             <li role="option">
                                 <a href="{{ product.url }}">
                                     {{- product | image_url: width: 50 | image_tag -}}

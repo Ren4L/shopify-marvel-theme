@@ -10,6 +10,8 @@
         | replace: '\/', '/'
         | replace: '%20', ' '
         | replace: '\u0026', '&'
+        | split: '?'
+        | last
 -%}
 
 {%- assign pageQuerystring = pageUrl | split: 'categ=' | last | downcase -%}

@@ -16,7 +16,7 @@
 
 {%- if predictive_search.performed -%}
     <div id="predictive-search-results">
-        <h1>{{ pageQuerystring }}</h1>
+        <h1>{{ content_for_header }}</h1>
         {%- if predictive_search.resources.products.size > 0 -%}
             <h3 id="predictive-search-products">Products</h3>
             <ul role="listbox" aria-labelledby="predictive-search-products">

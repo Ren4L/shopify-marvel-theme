@@ -1,3 +1,19 @@
+{%- capture contentForQuerystring -%}{{ content_for_header }}{%- endcapture -%}
+
+{%- assign pageUrl = contentForQuerystring
+        | split: '"pageurl":"'
+        | last
+        | split: '"'
+        | first
+        | split: '.myshopify.com'
+        | last
+        | replace: '\/', '/'
+        | replace: '%20', ' '
+        | replace: '\u0026', '&'
+-%}
+
+{%- assign pageQuerystring = pageUrl | split: '?' | last -%}
+
 {%- if predictive_search.performed -%}
     <div id="predictive-search-results">
         <h1>{{ predictive_search.categ }}</h1>
@@ -5,10 +21,17 @@
             <h3 id="predictive-search-products">Products</h3>
             <ul role="listbox" aria-labelledby="predictive-search-products">
                 {%- for product in predictive_search.resources.products -%}
-                    <li role="option">
-                        <span>{{ product.tags[0] }}</span>
-                        <a href="{{ product.url }}">{{ product | image_url: width: 50 | image_tag }}<span>{{ product.title }}</span></a>
-                    </li>
+                    {%- for tag in product.tags -%}
+                        {% assign lowercase_tag = tag | downcase %}
+                        {%- if pageQuerystring contains lowercase_tag -%}
+                            <li role="option">
+                                <a href="{{ product.url }}">
+                                    {{- product | image_url: width: 50 | image_tag -}}
+                                    <span>{{ product.title }}</span>
+                                </a>
+                            </li>
+                        {%- endif -%}
+                    {%- endfor -%}
                 {%- endfor -%}
             </ul>
         {%- endif -%}
